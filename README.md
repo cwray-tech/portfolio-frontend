@@ -1,4 +1,6 @@
-# frontend
+# My Personal Portfolio Frontend On NuxtJS
+
+This is the frontend code to my personal portfolio, coming soon!
 
 ## Build Setup
 
