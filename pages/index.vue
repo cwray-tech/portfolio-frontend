@@ -1,62 +1,106 @@
 <template>
-  <div class="">
-    <div>
-      <!-- This component requires Tailwind CSS >= 1.5.1 and @tailwindcss/ui >= 0.4.0 -->
-      <div class="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-        <div class="max-w-max-content lg:max-w-7xl mx-auto">
-          <div class="relative z-10 mb-8 md:mb-2 md:px-6">
-            <div class="text-base max-w-prose lg:max-w-6x1">
-              <p class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">{{ home.name }}</p>
-              <h1 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-6xl sm:leading-snug">
-                {{  home.title }}</h1>
+  <div>
+    <section class="lg:relative bg-gray-50">
+      <div
+        class="mx-auto px-4 lg:px-0 max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
+      >
+        <div class="lg:w-1/2 lg:pl-4 xl:pr-16">
+          <h2
+            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl"
+          >
+            {{ home.name }}
+          </h2>
+          <p
+            class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl"
+          >
+            {{ home.title }}
+          </p>
+          <div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow">
+              <NuxtLink
+                :to="home.hero_button_cta_route"
+                v-if="home.hero_button_cta_text && home.hero_button_cta_route"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              >
+                {{ home.hero_button_cta_text }}
+              </NuxtLink>
             </div>
-          </div>
-          <div class="relative">
-            <svg class="hidden md:block absolute top-0 right-0 -mt-20 -mr-20" width="404" height="384" fill="none" viewBox="0 0 404 384">
-              <defs>
-                <pattern id="95e8f2de-6d30-4b7e-8159-f791729db21b" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                </pattern>
-              </defs>
-              <rect width="404" height="384" fill="url(#95e8f2de-6d30-4b7e-8159-f791729db21b)" />
-            </svg>
-            <svg class="hidden md:block absolute bottom-0 left-0 -mb-20 -ml-20" width="404" height="384" fill="none" viewBox="0 0 404 384">
-              <defs>
-                <pattern id="7a00fe67-0343-4a3c-8e81-c145097a3ce0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-                </pattern>
-              </defs>
-              <rect width="404" height="384" fill="url(#7a00fe67-0343-4a3c-8e81-c145097a3ce0)" />
-            </svg>
-            <div class="relative md:bg-white md:p-6">
-              <div class="lg:grid lg:grid-cols-2 lg:gap-6 mb-8">
-                <div class="prose prose-lg text-gray-500 mb-6 lg:max-w-none lg:mb-0">
-                  {{ home.content_left }}
-                </div>
-                <div class="prose prose-lg text-gray-500">
-                  {{ home.content_right }}
-                </div>
-              </div>
-              <div class="inline-flex rounded-md shadow">
-                <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out">
-                  Hire Chris
-                </a>
-              </div>
+            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              <NuxtLink
+                :to="home.hero_button_2_route"
+                v-if="home.hero_button_2_text && home.hero_button_2_route"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+              >
+                {{ home.hero_button_2_text }}
+              </NuxtLink>
             </div>
           </div>
         </div>
       </div>
+      <div
+        class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
+      >
+        <img
+          class="absolute inset-0 w-full h-full object-cover"
+          :src="heroImageUrl"
+          :alt="home.title"
+        />
+      </div>
+    </section>
+    <section
+      class="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"
+    >
+      <div class="relative mx-auto lg:max-w-7xl w-full">
+        <div class="w-full">
+          <h2
+            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+          >
+            Recent Posts
+          </h2>
+          <div
+            class="mt-3 sm:mt-4 lg:grid md:grid-cols-2 md:gap-5 lg:items-center"
+          >
+            <p class="text-xl leading-7 text-gray-500">
+              Read some of my latest articles.
+            </p>
 
-    </div>
+          </div>
+        </div>
+        <div
+          class="mt-6 grid gap-16 border-t-2 border-gray-100 pt-10 md:grid-cols-2 md:gap-x-5  md:gap-y-12 w-full"
+        >
+          <div v-for="post in posts" :key="post.id">
+            <NuxtLink :to="'/posts/' + post.id" class="block">
+              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+                {{ post.title }}
+              </h3>
+              <p class="mt-3 text-base leading-6 text-gray-500">
+                {{ post.preview }}
+              </p>
+            </NuxtLink>
+            <div class="mt-3">
+              <NuxtLink
+                :to="'/posts/' + post.id"
+                class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+              >
+                Read full post
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-
 export default {
-  async asyncData ({ $axios }) {
-    const home = await $axios.$get('http://localhost:1337/home-page')
-    return { home }
+  async asyncData({ $axios }) {
+    const home = await $axios.$get("/home-page")
+    const heroImageUrl = "http://localhost:1337" + home.hero_image.url
+    const posts = await $axios.$get("/posts?_limit=4")
+    return { home, heroImageUrl, posts }
   }
-}
+
+};
 </script>

@@ -1,3 +1,5 @@
+import tailwindui from '@tailwindcss/ui'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -27,10 +29,9 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/date-fns',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -41,10 +42,25 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://localhost:3000'
+    baseURL: 'http://localhost:1337'
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  dateFns: {
+    /* module options */
+  },
+
+  // TailwindUi Configuration
+  tailwindcss: {
+    config: {
+      plugins: [tailwindui]
+    },
+    future: {
+      removeDeprecatedGapUtilities: true,
+      purgeLayersByDefault: true
+    }
   }
 }

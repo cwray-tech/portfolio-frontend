@@ -15,7 +15,8 @@
         </div>
 
         <div class="-mr-2 -my-2 md:hidden">
-          <button @click="toggleNav"
+          <button
+            @click="toggleNav"
             type="button"
             class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
           >
@@ -82,8 +83,9 @@
       To: "opacity-0 scale-95"
   -->
     <transition name="nav-menu">
-      <div v-show="navOpen"
-           class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+      <div
+        v-show="navOpen"
+        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
       >
         <div class="rounded-lg shadow-lg">
           <div class="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
@@ -198,23 +200,22 @@
 
 <script>
 export default {
-  watch:{
-    '$route' () {
-      this.navOpen = false
-    }
+  watch: {
+    $route () {
+      this.navOpen = false;
+    },
   },
   data: function () {
     return {
-      navOpen: false
-    }
+      navOpen: false,
+    };
   },
   methods: {
     toggleNav () {
-      this.navOpen ? this.navOpen = false : this.navOpen = true
-    }
-  }
-}
+      this.navOpen ? (this.navOpen = false) : (this.navOpen = true);
+    },
+  },
+};
 </script>
 <style>
-
 </style>

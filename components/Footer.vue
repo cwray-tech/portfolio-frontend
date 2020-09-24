@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+  <div class="bg-white px-4">
+    <div class="max-w-7xl mx-auto py-12 md:flex md:items-center md:justify-between w-full">
       <div class="flex justify-center md:order-2">
         <a href="#" class="text-gray-400 hover:text-gray-500">
           <span class="sr-only">Facebook</span>
@@ -49,5 +49,4 @@
       </div>
     </div>
   </div>
-
 </template>
