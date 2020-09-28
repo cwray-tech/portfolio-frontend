@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/markdownit": "^1.2.10",
     "@tailwindcss/ui": "^0.6.2",
     "core-js": "^3.6.5",
     "date-fns": "^2.16.1",

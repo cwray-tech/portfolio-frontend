@@ -37,12 +37,21 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/markdownit'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: 'http://localhost:1337'
+  },
+
+  // This is for displaying rich text content in the frontend.
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
