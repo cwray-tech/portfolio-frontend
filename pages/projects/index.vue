@@ -130,14 +130,33 @@
 </template>
 
 <script>
-import truncate from "~/assets/truncate";
-
 export default {
-  async asyncData({ $axios, $md }) {
-    const apiRoute = "http://localhost:1337";
-    const projects = await $axios.$get("/projects");
-    const projectPage = await $axios.$get("/projects-page");
-    return { projects, projectPage, apiRoute, $md };
+  data () {
+    return{
+      projectPage: {},
+      apiRoute: 'http://localhost:1337',
+      projects: []
+    }
   },
+  async fetch() {
+    this.projects = await fetch(this.apiRoute + "/projects")
+    .then(res => res.json())
+    this.projectPage = await fetch(this.apiRoute + "/projects-page")
+    .then(res => res.json())
+  },
+   head() {
+      return {
+        title: this.projectPage.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: this.projectPage.title,
+            name: this.projectPage.title,
+            content: this.projectPage.meta_description
+          }
+        ]
+      }
+    },
+  fetchOnServer: true
 };
 </script>

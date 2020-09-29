@@ -47,10 +47,32 @@
 <script>
 
 export default {
-  async asyncData ({ $axios }) {
-    const posts = await $axios.$get('/posts')
-    const postPage = await $axios.$get('/posts-page')
-    return { posts, postPage}
-  }
+  data () {
+    return{
+      postPage: {},
+      apiRoute: 'http://localhost:1337',
+      posts: []
+    }
+  },
+  async fetch () {
+    this.posts = await fetch(this.apiRoute + '/posts')
+    .then(res => res.json())
+    this.postPage = await fetch(this.apiRoute + '/posts-page')
+    .then(res => res.json())
+  },
+  head() {
+      return {
+        title: this.postPage.title,
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: this.postPage.title,
+            name: this.postPage.title,
+            content: this.postPage.meta_description
+          }
+        ]
+      }
+    },
+  fetchOnServer: true
 }
 </script>
