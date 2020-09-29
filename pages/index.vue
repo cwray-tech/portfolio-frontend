@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="lg:relative bg-gray-50 min-h-screen flex items-center">
+    <section class="lg:relative bg-gray-50 lg:min-h-screen lg:flex lg:items-center">
       <div
         class="mx-auto px-4 lg:px-0 max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
       >
@@ -134,7 +134,7 @@
             {{ home.introduction }}
           </p>
         </div>
-        <div class="prose prose-lg text-gray-500 mx-auto" v-if="content" v-html="content">
+        <div class="prose prose-lg text-gray-500 mx-auto text-justify" v-if="content" v-html="content">
 
         </div>
       </div>
@@ -145,12 +145,12 @@
         <div
           class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"
         ></div>
-        <div class="mx-auto text-base max-w-prose lg:max-w-none">
-          <p
-            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        <div class="mx-auto text-base  lg:max-w-none">
+          <NuxtLink to="/projects"
+            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
-            Project
-          </p>
+            Projects
+          </NuxtLink>
           <h1
             class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
@@ -191,7 +191,7 @@
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
             </svg>
-            <div class="relative text-base mx-auto max-w-prose lg:max-w-none content-center">
+            <div class="relative text-base mx-auto lg:max-w-none content-center">
               <figure>
                 <div class="relative pb-7/12 lg:pb-0">
                   <img
@@ -219,13 +219,13 @@
             </div>
           </div>
           <div>
-            <div class="text-base max-w-prose mx-auto lg:max-w-none">
+            <div class="text-base mx-auto lg:max-w-none">
               <p class="text-lg leading-7 text-gray-500 mb-5">
                {{ project.introduction }}
               </p>
             </div>
             <div
-              class="prose text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 mb-5" v-html="projectDescription"
+              class="prose text-gray-500 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5" v-html="projectDescription"
             >
             </div>
             <NuxtLink to="/projects" class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">View more details</NuxtLink>
@@ -239,12 +239,12 @@
         <div
           class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"
         ></div>
-        <div class="mx-auto text-base max-w-prose lg:max-w-none">
-          <p
-            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        <div class="mx-auto text-base lg:max-w-none">
+          <NuxtLink to="/projects"
+            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
-            Project
-          </p>
+            Projects
+          </NuxtLink>
           <h1
             class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
@@ -285,7 +285,7 @@
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
             </svg>
-            <div class="relative text-base mx-auto max-w-prose lg:max-w-none content-center">
+            <div class="relative text-base mx-auto lg:max-w-none content-center">
               <figure>
                 <div class="relative pb-7/12 lg:pb-0">
                   <img
@@ -313,13 +313,13 @@
             </div>
           </div>
           <div>
-            <div class="text-base max-w-prose mx-auto lg:max-w-none">
+            <div class="text-base mx-auto lg:max-w-none">
               <p class="text-lg leading-7 text-gray-500 mb-5">
                {{ secondProject.introduction }}
               </p>
             </div>
             <div
-              class="prose text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1 mb-5" v-html="secondProjectDescription"
+              class="prose text-gray-500 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5" v-html="secondProjectDescription"
             >
             </div>
             <NuxtLink to="/projects" class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150">View more details</NuxtLink>
@@ -375,6 +375,8 @@
 </template>
 
 <script>
+import truncate from '../assets/truncate';
+
 export default {
   async asyncData({ $axios, $md }) {
     const home = await $axios.$get("/home-page");
@@ -390,11 +392,11 @@ export default {
 
     const project = projects[0];
     const projectImage = apiRoute + project.main_image.url;
-    const projectDescription = $md.render(project.description)
+    const projectDescription = text_truncate($md.render(project.description), 600)
 
     const secondProject = projects[1];
     const secondProjectImage = apiRoute + secondProject.main_image.url;
-    const secondProjectDescription = $md.render(secondProject.description)
+    const secondProjectDescription = text_truncate($md.render(secondProject.description), 600)
 
 
     return {
