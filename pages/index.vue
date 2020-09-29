@@ -20,7 +20,7 @@
               <NuxtLink
                 :to="home.hero_button_cta_route"
                 v-if="home.hero_button_cta_text && home.hero_button_cta_route"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 {{ home.hero_button_cta_text }}
               </NuxtLink>
@@ -29,7 +29,7 @@
               <NuxtLink
                 :to="home.hero_button_2_route"
                 v-if="home.hero_button_2_text && home.hero_button_2_route"
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 {{ home.hero_button_2_text }}
               </NuxtLink>
@@ -48,7 +48,7 @@
       </div>
     </section>
     <!-- Introduction Area -->
-    <section class="relative py-16 bg-white overflow-hidden border-t">
+    <section class="relative py-16 bg-white overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
           <svg
@@ -140,7 +140,7 @@
       </div>
     </section>
     <!-- First Project Section -->
-    <section class="bg-white overflow-hidden border-t">
+    <section class="bg-white overflow-hidden">
       <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div
           class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"
@@ -234,7 +234,7 @@
       </div>
     </section>
     <!-- Second Project Section -->
-    <section class="bg-white overflow-hidden border-t">
+    <section class="bg-white overflow-hidden">
       <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div
           class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"
@@ -330,7 +330,7 @@
 
     <!-- Posts Section -->
     <section
-      class="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 border-t border-b"
+      class="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 border-b"
     >
       <div class="relative mx-auto lg:max-w-7xl w-full">
         <div class="w-full">
@@ -348,7 +348,7 @@
           </div>
         </div>
         <div
-          class="mt-6 grid gap-16 border-t-2 border-gray-100 pt-10 md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
+          class="mt-6 grid gap-16-2 border-gray-100 pt-10 md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
         >
           <div v-for="post in posts" :key="post.id">
             <NuxtLink :to="'/posts/' + post.id" class="block">
