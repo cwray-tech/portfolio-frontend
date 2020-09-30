@@ -4,7 +4,7 @@
 
     <ProjectList :projects='projects' />
 
-    <PostList :posts='posts' />
+    <PostList :posts='posts'  showHeading='true' :heading='"Read posts in " + technology.name' />
   </div>
 </template>
 

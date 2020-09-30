@@ -103,7 +103,9 @@
       </div>
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-          <NuxtLink :to="'/categories/' + post.category.slug" v-if="post.category"
+          <NuxtLink
+            :to="'/categories/' + post.category.slug"
+            v-if="post.category"
             class="text-base text-center block leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
             {{ post.category.name }}
@@ -115,19 +117,19 @@
           </h1>
         </div>
         <div
-        v-if="post.body"
+          v-if="post.body"
           class="prose prose-lg text-gray-500 mx-auto md:text-justify"
           v-html="$md.render(post.body)"
         ></div>
         <div class="prose prose-lg mt-8 mx-auto">
           <NuxtLink
-          :to="'/technologies/' + technology.id"
-          v-for="technology in post.technologies"
-          :key="technology.id"
-          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide bg-gray-100 py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
-        >
-          {{ technology.name }}
-        </NuxtLink>
+            :to="'/technologies/' + technology.slug"
+            v-for="technology in post.technologies"
+            :key="technology.id"
+            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide bg-gray-100 py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
+          >
+            {{ technology.name }}
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -136,16 +138,18 @@
 
 <script>
 export default {
-  data () {
-    return{
+  data() {
+    return {
       post: {},
-      apiRoute: 'http://localhost:1337'
-    }
+      apiRoute: "http://localhost:1337",
+    };
   },
   async fetch() {
-    const posts = await this.$axios.$get('/posts?slug=' + this.$route.params.slug)
-    this.post = posts[0]
+    const posts = await this.$axios.$get(
+      "/posts?slug=" + this.$route.params.slug
+    );
+    this.post = posts[0];
   },
-  fetchOnServer: true
+  fetchOnServer: true,
 };
 </script>

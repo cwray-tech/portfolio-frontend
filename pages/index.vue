@@ -146,7 +146,7 @@
     <ProjectList :projects='projects' />
 
     <!-- Posts Section -->
-    <PostList :posts='posts' showHeading='true' />
+    <PostList :posts='posts' showHeading='true' heading='Latest Posts' subheading='Read some of the latest articles I have written on web development and more.' />
   </div>
 </template>
 
