@@ -1,5 +1,5 @@
 <template>
-<div>
+  <div v-if="projects.length != 0">
     <section
       class="bg-white overflow-hidden"
       v-for="project in projects"
@@ -7,7 +7,7 @@
     >
       <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div
-          class="hidden lg:block  absolute top-0 bottom-0 left-3/4 w-screen"
+          class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"
         ></div>
         <div class="mx-auto text-base lg:max-w-none">
           <h1
@@ -84,7 +84,7 @@
                 :to="'/technologies/' + technology.id"
                 v-for="technology in project.technologies"
                 :key="technology.id"
-                class="text-base leading-6 text-indigo-600 font-semibold tracking-wide  py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
+                class="text-base leading-6 text-indigo-600 font-semibold tracking-wide py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
               >
                 {{ technology.name }}
               </NuxtLink>
@@ -109,16 +109,16 @@
         </div>
       </div>
     </section>
-</div>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['projects'],
-  data () {
+  props: ["projects"],
+  data() {
     return {
-      apiRoute: 'http://localhost:1337'
-    }
-  }
-}
+      apiRoute: "http://localhost:1337",
+    };
+  },
+};
 </script>

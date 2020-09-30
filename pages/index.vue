@@ -169,12 +169,11 @@ export default {
   },
    head() {
       return {
-        title: this.home.title,
+        title: this.home.name,
         meta: [
-          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: this.home.title,
-            name: this.home.title,
+            hid: this.home.id,
+            name: this.home.name,
             content: this.home.meta_description
           }
         ]

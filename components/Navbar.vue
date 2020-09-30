@@ -17,8 +17,9 @@
         <div class="-mr-2 -my-2 md:hidden">
           <button
             @click="toggleNav"
+            aria-label="Mobile Menu Button"
             type="button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
           >
             <!-- Heroicon name: menu -->
             <svg
@@ -68,10 +69,10 @@
         >
           <span class="inline-flex rounded-md shadow-sm">
             <NuxtLink
-              to="/hire-chris"
+              to="/contact"
               class="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
             >
-              Hire Me
+              Contact
             </NuxtLink>
           </span>
         </div>
@@ -104,10 +105,12 @@
                     alt="Workflow"
                   />
                 </div>
-                <div class="-mr-2" @click="toggleNav">
+                <div class="-mr-2" >
                   <button
+                    @click="toggleNav"
                     type="button"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+                    aria-label="Close Mobile Menu"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                   >
                     <!-- Heroicon name: x -->
                     <svg
@@ -217,7 +220,7 @@
                     </div>
                   </NuxtLink>
                   <NuxtLink
-                    to="hire-chris"
+                    to="/contact"
                     class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
                   >
                     <!-- Heroicon name: chart-bar -->
@@ -235,7 +238,7 @@
                       />
                     </svg>
                     <div class="text-base leading-6 font-medium text-gray-900">
-                      Hire Me
+                      Contact
                     </div>
                   </NuxtLink>
                 </nav>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PageHeader :title='project.name' :subtitle='project.introduction' />
     <div class="relative py-16 bg-white overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
@@ -70,7 +71,7 @@
 
         </div>
       </div>
-      <div class="relative px-4 sm:px-6 lg:px-8">
+      <div class="relative px-4 sm:px-6 lg:px-8 min-h-screen">
         <div class="text-lg max-w-prose mx-auto mb-6">
 
           <h1
