@@ -58,6 +58,7 @@
                   <img
                     :src="apiRoute + project.main_image.url"
                     :alt="project.name"
+                    loading=lazy
                     class="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
                   />
                 </div>
