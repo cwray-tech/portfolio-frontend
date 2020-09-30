@@ -103,7 +103,7 @@
       </div>
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-          <p
+          <p v-if="post.category"
             class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
           >
             {{ post.category.name }}
@@ -135,10 +135,15 @@
 
 <script>
 export default {
-  async asyncData({ $axios, params, $md }) {
-    const apiRoute = "http://localhost:1337";
-    const post = await $axios.$get(`posts/${params.slug}`);
-    return { post, apiRoute, $md };
+  data () {
+    return{
+      post: {},
+      apiRoute: 'http://localhost:1337'
+    }
   },
+  async fetch() {
+    this.post = await this.$axios.$get('/posts/' + this.$route.params.slug)
+  },
+  fetchOnServer: true
 };
 </script>

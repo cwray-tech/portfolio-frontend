@@ -42,7 +42,7 @@
       <div
         class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full"
       >
-        <img
+        <img v-if="home.hero_image"
           class="absolute inset-0 w-full h-full object-cover"
           :src="apiRoute + home.hero_image.url"
           :alt="home.title"
@@ -294,8 +294,6 @@
 </template>
 
 <script>
-import truncate from '../assets/truncate'
-
 export default {
   data () {
     return{
@@ -306,14 +304,11 @@ export default {
     }
   },
   async fetch() {
-    this.home = await fetch( this.apiRoute + "/home-page")
-    .then(res => res.json())
+    this.home = await this.$axios.$get("/home-page")
 
-    this.posts = await fetch(this.apiRoute + "/posts?_limit=4")
-    .then(res => res.json())
+    this.posts = await this.$axios.$get("/posts?_limit=4")
 
-    this.projects = await fetch(this.apiRoute + "/projects?_limit=2")
-    .then(res => res.json())
+    this.projects = await this.$axios.$get("/projects?_limit=2")
   },
    head() {
       return {
