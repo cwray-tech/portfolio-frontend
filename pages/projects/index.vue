@@ -10,7 +10,7 @@ export default {
   data() {
     return {
       projectPage: {},
-      apiRoute: "http://localhost:1337",
+      apiRoute: process.env.API_ROUTE,
       projects: [],
     };
   },

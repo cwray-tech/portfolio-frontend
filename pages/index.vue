@@ -155,7 +155,7 @@ export default {
   data () {
     return{
       home: {},
-      apiRoute: 'http://localhost:1337',
+      apiRoute: process.env.API_ROUTE,
       posts: [],
       projects: []
     }

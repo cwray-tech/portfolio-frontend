@@ -141,7 +141,7 @@ export default {
   data() {
     return {
       post: {},
-      apiRoute: "http://localhost:1337",
+      apiRoute: process.env.API_ROUTE,
     };
   },
   async fetch() {

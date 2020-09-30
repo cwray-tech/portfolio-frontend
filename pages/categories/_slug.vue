@@ -15,7 +15,7 @@ export default {
       category: {},
       posts: [],
       projects: [],
-      apiRoute: 'http://localhost:1337'
+      apiRoute: process.env.API_ROUTE
     }
   },
   async fetch() {

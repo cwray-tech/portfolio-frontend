@@ -47,7 +47,7 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://localhost:1337'
+    baseURL: process.env.API_ROUTE
   },
 
   // This is for displaying rich text content in the frontend.
@@ -60,10 +60,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  },
-
-  dateFns: {
-    /* module options */
   },
 
   // TailwindUi Configuration

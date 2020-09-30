@@ -95,7 +95,7 @@ export default {
   data () {
     return{
       project: {},
-      apiRoute: 'http://localhost:1337'
+      apiRoute: process.env.API_ROUTE
     }
   },
   async fetch() {

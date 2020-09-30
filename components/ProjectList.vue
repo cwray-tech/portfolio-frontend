@@ -119,7 +119,7 @@ export default {
   props: ["projects"],
   data() {
     return {
-      apiRoute: "http://localhost:1337",
+      apiRoute: process.env.API_ROUTE,
     };
   },
 };

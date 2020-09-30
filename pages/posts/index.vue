@@ -14,7 +14,7 @@ export default {
   data () {
     return{
       postPage: {},
-      apiRoute: 'http://localhost:1337',
+      apiRoute: process.env.API_ROUTE,
       posts: []
     }
   },

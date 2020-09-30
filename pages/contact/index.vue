@@ -78,7 +78,7 @@ export default {
   data() {
     return {
       contactPage: {},
-      apiRoute: "http://localhost:1337",
+      apiRoute: process.env.API_ROUTE,
     };
   },
   async fetch() {
