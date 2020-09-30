@@ -6,8 +6,8 @@
         <div class="lg:col-span-1">
           <img
             class="h-10"
-            src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
-            alt="Chris Wray"
+            src="/web-programming-gray.svg"
+            alt="Chris Wray website logo"
           />
           <p class="mt-8 text-gray-500 text-base leading-6">
             Trying to do my part in making the world a better place.

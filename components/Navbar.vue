@@ -7,9 +7,9 @@
         <div class="lg:w-0 lg:flex-1">
           <NuxtLink to="/" class="flex">
             <img
-              class="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-              alt="Chris Wray"
+              class="h-8 w-auto sm:h-12"
+              src="/web-programming.svg"
+              alt="Website Logo"
             />
           </NuxtLink>
         </div>
@@ -101,8 +101,8 @@
                 <div>
                   <img
                     class="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                    alt="Workflow"
+                    src="/web-programming.svg"
+                    alt="Website Logo"
                   />
                 </div>
                 <div class="-mr-2">
