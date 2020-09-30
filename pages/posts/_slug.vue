@@ -115,6 +115,7 @@
           </h1>
         </div>
         <div
+        v-if="post.body"
           class="prose prose-lg text-gray-500 mx-auto md:text-justify"
           v-html="$md.render(post.body)"
         ></div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="lg:relative bg-gray-50 lg:min-h-screen lg:flex lg:items-center"
+      class="lg:relative  lg:min-h-screen lg:flex lg:items-center"
     >
       <div
         class="mx-auto px-4 lg:px-0 max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
@@ -143,153 +143,10 @@
       </div>
     </section>
     <!-- Project Sections -->
-    <section class="bg-white overflow-hidden" v-for="project in projects" :key="project.id">
-      <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div
-          class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"
-        ></div>
-        <div class="mx-auto text-base lg:max-w-none">
-          <NuxtLink
-            to="/projects"
-            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
-          >
-            Projects
-          </NuxtLink>
-          <h1
-            class="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-          >
-            {{ project.name }}
-          </h1>
-        </div>
-        <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-          <div class="relative mb-8 lg:mb-0 lg:row-start-1 lg:col-start-2">
-            <svg
-              class="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
-              width="404"
-              height="384"
-              fill="none"
-              viewBox="0 0 404 384"
-            >
-              <defs>
-                <pattern
-                  id="de316486-4a29-4312-bdfc-fbce2132a2c1"
-                  x="0"
-                  y="0"
-                  width="20"
-                  height="20"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect
-                    x="0"
-                    y="0"
-                    width="4"
-                    height="4"
-                    class="text-gray-200"
-                    fill="currentColor"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                width="404"
-                height="384"
-                fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
-              />
-            </svg>
-            <div
-              class="relative text-base mx-auto lg:max-w-none content-center"
-            >
-              <figure>
-                <div class="relative pb-7/12 lg:pb-0">
-                  <img
-                    :src="apiRoute + project.main_image.url"
-                    :alt="project.name"
-                    class="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
-                  />
-                </div>
-                <figcaption
-                  v-if="project.image_caption"
-                  class="flex mt-3 text-sm text-gray-500"
-                >
-                  <!-- Heroicon name: camera -->
-                  <svg
-                    class="flex-none w-5 h-5 mr-2 text-gray-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  {{ project.image_caption }}
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          <div>
-            <div class="text-base mx-auto lg:max-w-none">
-              <p class="text-lg leading-7 text-gray-500 mb-5">
-                {{ project.introduction }}
-              </p>
-            </div>
-            <div
-              class="prose text-gray-500 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
-              v-html="$md.render(project.description)"
-            ></div>
-            <NuxtLink
-              to="/projects"
-              class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-              >View more details</NuxtLink
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <ProjectList :projects='projects' />
 
     <!-- Posts Section -->
-    <section
-      class="pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8 border-b"
-    >
-      <div class="relative mx-auto lg:max-w-7xl w-full">
-        <div class="w-full">
-          <h2
-            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
-          >
-            Recent Posts
-          </h2>
-          <div
-            class="mt-3 sm:mt-4 lg:grid md:grid-cols-2 md:gap-5 lg:items-center"
-          >
-            <p class="text-xl leading-7 text-gray-500">
-              Read some of my latest articles.
-            </p>
-          </div>
-        </div>
-        <div
-          class="mt-6 grid gap-16-2 border-gray-100 pt-10 md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
-        >
-          <div v-for="post in posts" :key="post.id">
-            <NuxtLink :to="'/posts/' + post.id" class="block">
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
-                {{ post.title }}
-              </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500">
-                {{ post.preview }}
-              </p>
-            </NuxtLink>
-            <div class="mt-3">
-              <NuxtLink
-                :to="'/posts/' + post.id"
-                class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-              >
-                Read full post
-              </NuxtLink>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PostList :posts='posts' showHeading='true' />
   </div>
 </template>
 
