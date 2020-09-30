@@ -22,7 +22,7 @@
           class="mt-6 grid gap-16-2 border-t-2 border-gray-100 pt-10 md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
         >
           <div v-for="post in posts" :key="post.id">
-            <NuxtLink :to="'/posts/' + post.id" class="block">
+            <NuxtLink :to="'/posts/' + post.slug" class="block">
               <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
                 {{ post.title }}
               </h3>
@@ -32,7 +32,7 @@
             </NuxtLink>
             <div class="mt-3">
               <NuxtLink
-                :to="'/posts/' + post.id"
+                :to="'/posts/' + post.slug"
                 class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
               >
                 Read full post

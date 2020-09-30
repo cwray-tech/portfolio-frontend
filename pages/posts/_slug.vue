@@ -103,11 +103,11 @@
       </div>
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
-          <p v-if="post.category"
-            class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+          <NuxtLink :to="'/categories/' + post.category.slug" v-if="post.category"
+            class="text-base text-center block leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
             {{ post.category.name }}
-          </p>
+          </NuxtLink>
           <h1
             class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
@@ -143,7 +143,8 @@ export default {
     }
   },
   async fetch() {
-    this.post = await this.$axios.$get('/posts/' + this.$route.params.slug)
+    const posts = await this.$axios.$get('/posts?slug=' + this.$route.params.slug)
+    this.post = posts[0]
   },
   fetchOnServer: true
 };

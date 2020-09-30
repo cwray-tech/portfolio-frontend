@@ -99,7 +99,8 @@ export default {
     }
   },
   async fetch() {
-    this.project = await this.$axios.$get('/projects/' + this.$route.params.slug)
+    const projects = await this.$axios.$get('/projects?slug=' + this.$route.params.slug)
+    this.project = projects[0]
   },
   fetchOnServer: true
 };

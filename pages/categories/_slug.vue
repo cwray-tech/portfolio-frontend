@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader :title='technology.name' :subtitle='technology.description' />
+    <PageHeader :title='category.name' :subtitle='category.description' />
 
     <ProjectList :projects='projects' />
 
@@ -12,27 +12,27 @@
 export default {
   data () {
     return{
-      technology: {},
+      category: {},
       posts: [],
       projects: [],
       apiRoute: 'http://localhost:1337'
     }
   },
   async fetch() {
-    const technologies = await this.$axios.$get('/technologies?slug=' + this.$route.params.slug)
-    this.technology = technologies[0]
-    this.posts = this.technology.posts
-    this.projects = this.technology.projects
+    const categories = await this.$axios.$get('/categories?slug=' + this.$route.params.slug)
+    this.category = categories[0]
+    this.posts = this.category.posts
+    this.projects = this.category.projects
   },
   head() {
       return {
-        title: this.technology.name,
+        title: this.category.name,
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: this.technology.name,
-            name: this.technology.name,
-            content: this.technology.meta_description
+            hid: this.category.name,
+            name: this.category.name,
+            content: this.category.meta_description
           }
         ]
       }
