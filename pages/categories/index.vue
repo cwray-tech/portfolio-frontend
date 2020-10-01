@@ -13,7 +13,6 @@ export default {
   data () {
     return{
       categoryPage: {},
-      apiRoute: 'http://localhost:1337',
       categories: []
     }
   },

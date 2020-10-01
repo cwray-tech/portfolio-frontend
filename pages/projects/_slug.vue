@@ -94,8 +94,7 @@
 export default {
   data () {
     return{
-      project: {},
-      apiRoute: process.env.API_ROUTE
+      project: {}
     }
   },
   async fetch() {

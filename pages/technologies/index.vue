@@ -14,7 +14,6 @@ export default {
   data () {
     return{
       technologyPage: {},
-      apiRoute: process.env.API_ROUTE,
       technologies: []
     }
   },

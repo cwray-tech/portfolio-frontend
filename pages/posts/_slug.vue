@@ -141,7 +141,6 @@ export default {
   data() {
     return {
       post: {},
-      apiRoute: process.env.API_ROUTE,
     };
   },
   async fetch() {

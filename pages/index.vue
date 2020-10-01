@@ -44,7 +44,7 @@
       >
         <img v-if="home.hero_image"
           class="absolute inset-0 w-full h-full object-cover"
-          :src="apiRoute + home.hero_image.url"
+          :src="home.hero_image.url"
           :alt="home.title"
         />
       </div>
@@ -155,7 +155,6 @@ export default {
   data () {
     return{
       home: {},
-      apiRoute: process.env.API_ROUTE,
       posts: [],
       projects: []
     }

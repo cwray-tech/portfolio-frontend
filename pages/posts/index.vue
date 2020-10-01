@@ -14,7 +14,6 @@ export default {
   data () {
     return{
       postPage: {},
-      apiRoute: process.env.API_ROUTE,
       posts: []
     }
   },

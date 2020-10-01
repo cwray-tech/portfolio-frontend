@@ -77,8 +77,7 @@
 export default {
   data() {
     return {
-      contactPage: {},
-      apiRoute: process.env.API_ROUTE,
+      contactPage: {}
     };
   },
   async fetch() {

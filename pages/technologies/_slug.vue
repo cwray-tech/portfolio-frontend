@@ -14,8 +14,7 @@ export default {
     return{
       technology: {},
       posts: [],
-      projects: [],
-      apiRoute: process.env.API_ROUTE
+      projects: []
     }
   },
   async fetch() {

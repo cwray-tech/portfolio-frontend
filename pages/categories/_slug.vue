@@ -15,7 +15,6 @@ export default {
       category: {},
       posts: [],
       projects: [],
-      apiRoute: process.env.API_ROUTE
     }
   },
   async fetch() {

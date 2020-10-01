@@ -10,7 +10,6 @@ export default {
   data() {
     return {
       projectPage: {},
-      apiRoute: process.env.API_ROUTE,
       projects: [],
     };
   },
