@@ -10,7 +10,7 @@
           class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"
         ></div>
         <div class="mx-auto text-base lg:max-w-none">
-          <NuxtLink v-if="project.category" :to="'/categories/' + project.category.slug" class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150">{{ project.category.name }}</NuxtLink>
+          <NuxtLink v-if="project.category.name" :to="'/categories/' + project.category.slug" class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150">{{ project.category.name }}</NuxtLink>
           <h1
             class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >

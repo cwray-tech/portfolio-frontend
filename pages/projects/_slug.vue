@@ -77,7 +77,7 @@
           <h1
             class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
-            {{ project.name }}
+            Project Overview
           </h1>
         </div>
         <div v-if="project.description"
