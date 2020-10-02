@@ -1,6 +1,8 @@
 # My Personal Portfolio Frontend On NuxtJS
 
-This is the frontend code to my personal portfolio, coming soon!
+This is the frontend code to [my personal portfolio](https://chriswray.dev).
+
+I am open to opportunities! Feel free to check out my website and learn more about me.
 
 ## Build Setup
 
