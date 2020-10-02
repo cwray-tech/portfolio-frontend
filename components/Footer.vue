@@ -160,6 +160,15 @@
                 </li>
                 <li class="mt-4">
                   <a
+                    href="https://tailwindui.com/"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    TailwindUI
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a
                     href="https://strapi.io/"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
