@@ -171,8 +171,8 @@ export default {
         title: this.home.name,
         meta: [
           {
-            hid: this.home.id,
-            name: this.home.name,
+            hid: 'description',
+            name: 'description',
             content: this.home.meta_description
           }
         ]

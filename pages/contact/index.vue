@@ -88,8 +88,8 @@ export default {
       title: this.contactPage.title,
       meta: [
         {
-          hid: this.contactPage.title,
-          name: this.contactPage.title,
+          hid: 'description',
+          name: 'description',
           content: this.contactPage.meta_description,
         },
       ],

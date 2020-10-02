@@ -101,6 +101,18 @@ export default {
     const projects = await this.$axios.$get('/projects?slug=' + this.$route.params.slug)
     this.project = projects[0]
   },
+  head() {
+    return {
+      title: this.project.name,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.project.introduction,
+        },
+      ],
+    };
+  },
   fetchOnServer: true
 };
 </script>

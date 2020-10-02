@@ -26,8 +26,8 @@ export default {
         title: this.technologyPage.title,
         meta: [
           {
-            hid: this.technologyPage.title,
-            name: this.technologyPage.title,
+            hid: 'description',
+            name: 'description',
             content: this.technologyPage.meta_description
           }
         ]

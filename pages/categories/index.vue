@@ -25,8 +25,8 @@ export default {
         title: this.categoryPage.title,
         meta: [
           {
-            hid: this.categoryPage.title,
-            name: this.categoryPage.title,
+            hid: 'description',
+            name: 'description',
             content: this.categoryPage.meta_description
           }
         ]

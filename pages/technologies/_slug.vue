@@ -29,8 +29,8 @@ export default {
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: this.technology.name,
-            name: this.technology.name,
+            hid: 'description',
+            name: 'description',
             content: this.technology.meta_description
           }
         ]

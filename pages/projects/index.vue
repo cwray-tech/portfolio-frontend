@@ -24,8 +24,8 @@ export default {
       title: this.projectPage.title,
       meta: [
         {
-          hid: this.projectPage.title,
-          name: this.projectPage.title,
+          hid: 'description',
+          name: 'description',
           content: this.projectPage.meta_description,
         },
       ],

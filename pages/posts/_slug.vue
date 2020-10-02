@@ -149,6 +149,18 @@ export default {
     );
     this.post = posts[0];
   },
+  head() {
+    return {
+      title: this.post.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.body,
+        },
+      ],
+    };
+  },
   fetchOnServer: true,
 };
 </script>

@@ -26,8 +26,8 @@ export default {
         title: this.postPage.title,
         meta: [
           {
-            hid: this.postPage.title,
-            name: this.postPage.title,
+            hid: 'description',
+            name: 'description',
             content: this.postPage.meta_description
           }
         ]
