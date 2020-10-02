@@ -155,7 +155,7 @@
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
-                    TailwindCSS
+                    Tailwind CSS
                   </a>
                 </li>
                 <li class="mt-4">
@@ -164,7 +164,7 @@
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
-                    TailwindUI
+                    Tailwind UI
                   </a>
                 </li>
                 <li class="mt-4">
