@@ -92,7 +92,7 @@ export default {
     };
   },
   methods: {
-    sendMessage(form) {
+    sendMessage() {
       this.loading = true;
       this.$axios
         .post("/messages", {
