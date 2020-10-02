@@ -2,7 +2,7 @@
 
   <div class="bg-white  py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <div class="lg:max-w-7xl w-full mx-auto">
-      <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+      <div class="lg:grid lg:grid-cols-3 lg:gap-20">
         <div class="lg:col-span-1">
           <img
             class="h-10"
@@ -13,7 +13,6 @@
             Trying to do my part in making the world a better place.
           </p>
           <div class="mt-8 flex">
-
             <a href="https://github.com/cwray-tech" class="text-gray-400 hover:text-gray-500">
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -28,9 +27,7 @@
         </div>
         <div class="mt-12 grid lg:grid-cols-2 gap-8 xl:mt-0 lg:col-span-2">
           <div class="md:grid md:grid-cols-2 md:gap-8">
-          </div>
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div>
+            <div class="md:col-start-2">
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
               >
@@ -79,16 +76,65 @@
                 </li>
               </ul>
             </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h4
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+              >
+                Hosting
+              </h4>
+              <ul class="mt-4">
+                <li>
+                  <a
+                    href="https://heroku.com"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    API-Heroku
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a
+                    href="https://www.netlify.com/"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Frontend-Netlify
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a
+                    href="https://www.mongodb.com/"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Database-MongoDB Atlas
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a
+                    href="https://cloudinary.com/"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Images-Cloudinary
+                  </a>
+                </li>
+
+              </ul>
+            </div>
             <div class="mt-12 md:mt-0">
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
               >
-                Tech Used On This Website
+                Frameworks
               </h4>
               <ul class="mt-4">
                 <li>
                   <a
                     href="https://nuxtjs.org/"
+                    target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     NuxtJs
@@ -97,6 +143,7 @@
                 <li class="mt-4">
                   <a
                     href="https://vuejs.org/"
+                    target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     VueJs
@@ -105,6 +152,7 @@
                 <li class="mt-4">
                   <a
                     href="https://tailwindcss.com/"
+                    target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     TailwindCSS
@@ -113,6 +161,7 @@
                 <li class="mt-4">
                   <a
                     href="https://strapi.io/"
+                    target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Strapi CMS

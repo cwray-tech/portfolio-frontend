@@ -10,7 +10,12 @@
           class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"
         ></div>
         <div class="mx-auto text-base lg:max-w-none">
-          <NuxtLink v-if="project.category.name" :to="'/categories/' + project.category.slug" class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150">{{ project.category.name }}</NuxtLink>
+          <NuxtLink
+            v-if="project.category.name"
+            :to="'/categories/' + project.category.slug"
+            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
+            >{{ project.category.name }}</NuxtLink
+          >
           <h1
             class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
@@ -59,7 +64,7 @@
                   <img
                     :src="project.main_image.url"
                     :alt="project.name"
-                    loading=lazy
+                    loading="lazy"
                     class="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"
                   />
                 </div>
@@ -82,25 +87,19 @@
                   {{ project.image_caption }}
                 </figcaption>
               </figure>
-              <NuxtLink
-                :to="'/technologies/' + technology.slug"
-                v-for="technology in project.technologies"
-                :key="technology.id"
-                class="text-base leading-6 text-indigo-600 font-semibold tracking-wide py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
-              >
-                {{ technology.name }}
-              </NuxtLink>
+              <ProjectTechnologies :project='project' />
             </div>
           </div>
           <div>
             <div class="text-base mx-auto lg:max-w-none">
+              <ProjectLinks :project='project' />
               <p class="text-lg leading-7 text-gray-500 mb-5">
                 {{ project.introduction }}
               </p>
             </div>
             <div
               class="prose text-gray-500 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
-              v-html="$md.render(project.description)"
+              v-html="$md.render(project.preview)"
             ></div>
             <NuxtLink
               :to="'/projects/' + project.slug"

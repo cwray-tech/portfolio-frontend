@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader :title='project.name' :subtitle='project.introduction' />
+    <PageHeader :title="project.name" :subtitle="project.introduction" />
     <div class="relative py-16 bg-white overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
@@ -68,23 +68,25 @@
               fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
             />
           </svg>
-
         </div>
       </div>
       <div class="relative px-4 sm:px-6 lg:px-8 min-h-screen">
         <div class="text-lg max-w-prose mx-auto mb-6">
-
           <h1
             class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
             Project Overview
           </h1>
         </div>
-        <div v-if="project.description"
-          class="prose prose-lg text-gray-500 mx-auto md:text-justify"
+        <div
+          v-if="project.description"
+          class="prose prose-lg text-gray-500 mx-auto"
           v-html="$md.render(project.description)"
         ></div>
-
+        <div class="prose prose-lg text-gray-500 mx-auto mt-8">
+          <ProjectLinks :project="project" />
+          <ProjectTechnologies :project="project" />
+        </div>
       </div>
     </div>
   </div>
@@ -92,27 +94,29 @@
 
 <script>
 export default {
-  data () {
-    return{
-      project: {}
-    }
+  data() {
+    return {
+      project: {},
+    };
   },
   async fetch() {
-    const projects = await this.$axios.$get('/projects?slug=' + this.$route.params.slug)
-    this.project = projects[0]
+    const projects = await this.$axios.$get(
+      "/projects?slug=" + this.$route.params.slug
+    );
+    this.project = projects[0];
   },
   head() {
     return {
       title: this.project.name,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: this.project.introduction,
         },
       ],
     };
   },
-  fetchOnServer: true
+  fetchOnServer: true,
 };
 </script>
