@@ -12,7 +12,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Get to know Chris.' }
+      { hid: 'description', name: 'description', content: 'Get to know Chris.' },
+      { hid: 'og: type', property: 'og:type', content: 'website' },
+      { hid: 'og: image', property: 'og:image', content: 'https://chriswray.dev/chris-wray-family.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
