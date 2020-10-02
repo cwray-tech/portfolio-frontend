@@ -17,8 +17,8 @@ export default {
     }
   },
   async fetch () {
-    this.categories = await this.$axios.$get('/categories')
-    this.categoryPage = await this.$axios.$get('/category-page')
+    this.categories = await this.$axios.$get('/categories');
+    this.categoryPage = await this.$axios.$get('/category-page');
   },
   head() {
       return {

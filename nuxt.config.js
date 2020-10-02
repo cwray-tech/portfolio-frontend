@@ -15,14 +15,13 @@ export default {
       { hid: 'description', name: 'description', content: 'Get to know Chris.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
-
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     //This is for generating a preview. Add ?preview=true to url to see updated content from api.
