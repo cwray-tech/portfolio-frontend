@@ -9,11 +9,16 @@
           >
             {{ title }}
           </h1>
+
           <p v-if="subtitle"
             class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
           >
             {{ subtitle }}
           </p>
+          <a v-if="link && linkText" target="_blank" class="block mt-3 md:pt-5 text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" :href="link">
+            {{ linkText }}
+          </a>
+
         </div>
       </div>
     </section>
@@ -21,6 +26,6 @@
 
 <script>
 export default {
-  props: ['title', 'subtitle']
+  props: ['title', 'subtitle', 'link', 'linkText']
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader :title='technology.name' :subtitle='technology.description' />
+    <PageHeader :title='technology.name' :subtitle='technology.description' :link='technology.link' :linkText='technology.link_text'/>
 
     <ProjectList :projects='projects' />
 
