@@ -4,7 +4,7 @@
     >
       <div class="relative mx-auto lg:max-w-7xl w-full">
         <div
-          class="mt-6 grid gap-16-2 pt-10 md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
+          class="mt-6 grid gap-16-2 pt-10 md:grid-cols-2 md:gap-x-5 gap-y-12 w-full"
         >
           <div v-for="technology in technologies" :key="technology.id">
             <NuxtLink :to="'/technologies/' + technology.slug" class="block">

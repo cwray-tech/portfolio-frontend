@@ -19,7 +19,7 @@
           </div>
         </div>
         <div
-          class="mt-10 grid gap-16-2  md:grid-cols-2 md:gap-x-5 md:gap-y-12 w-full"
+          class="mt-10 grid gap-16-2  md:grid-cols-2 md:gap-x-5 gap-y-12 w-full"
         >
           <div v-for="post in posts" :key="post.id">
             <NuxtLink :to="'/posts/' + post.slug" class="block">

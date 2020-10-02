@@ -1,7 +1,7 @@
 <template>
 
-  <div class="bg-white">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+  <div class="bg-white  py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="lg:max-w-7xl w-full mx-auto">
       <div class="lg:grid lg:grid-cols-3 lg:gap-8">
         <div class="lg:col-span-1">
           <img
