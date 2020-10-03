@@ -57,7 +57,8 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    injected: true,
+    html: true
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
