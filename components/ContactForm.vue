@@ -8,6 +8,7 @@
       v-else
       v-on:submit.prevent="sendMessage"
       class="grid grid-cols-1 gap-y-6"
+      data-netlify="true"
     >
       <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
         Bummer, Something went wrong. Did you fill out all of the fields?
