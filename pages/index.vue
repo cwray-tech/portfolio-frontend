@@ -44,10 +44,10 @@
       >
         <img v-if="home.hero_image"
           class="absolute inset-0 w-full h-full object-cover"
-          :srcset="home.hero_image.formats.small.url + ' ,' +
-             home.hero_image.formats.medium.url + ' 1.5x,' +
-             home.hero_image.formats.large.url + ' 2x'"
-          :src="home.hero_image.url"
+          :srcset="home.hero_image.formats.medium.url + ' ,' +
+             home.hero_image.formats.large.url + ' 1.5x,' +
+             home.hero_image.url + ' 2x,'"
+          :src="home.hero_image.formats.large.url"
           :alt="home.title"
         />
       </div>

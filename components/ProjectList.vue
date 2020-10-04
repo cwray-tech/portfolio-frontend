@@ -62,7 +62,7 @@
               <figure class="mb-4">
                 <div class="relative pb-7/12 lg:pb-0">
                   <img
-                    :src="project.main_image.url"
+                    :src="project.main_image.formats.large.url"
                     :alt="project.name"
                     loading="lazy"
                     class="rounded-lg shadow-lg object-cover object-center absolute inset-0 w-full h-full lg:static lg:h-auto"

@@ -15,7 +15,7 @@
           >
             {{ subtitle }}
           </p>
-          <a v-if="link && linkText" target="_blank" class="block mt-3 md:pt-5 text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" :href="link">
+          <a v-if="link && linkText" rel="noopener" target="_blank" class="block mt-3 md:pt-5 text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150" :href="link">
             {{ linkText }}
           </a>
 

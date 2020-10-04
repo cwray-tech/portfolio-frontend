@@ -88,6 +88,7 @@
                 <li>
                   <a
                     href="https://heroku.com"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -97,6 +98,7 @@
                 <li class="mt-4">
                   <a
                     href="https://www.netlify.com/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -106,6 +108,7 @@
                 <li class="mt-4">
                   <a
                     href="https://www.mongodb.com/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -115,6 +118,7 @@
                 <li class="mt-4">
                   <a
                     href="https://cloudinary.com/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -134,6 +138,7 @@
                 <li>
                   <a
                     href="https://nuxtjs.org/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -143,6 +148,7 @@
                 <li class="mt-4">
                   <a
                     href="https://vuejs.org/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -152,6 +158,7 @@
                 <li class="mt-4">
                   <a
                     href="https://tailwindcss.com/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -161,6 +168,7 @@
                 <li class="mt-4">
                   <a
                     href="https://tailwindui.com/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
@@ -170,6 +178,7 @@
                 <li class="mt-4">
                   <a
                     href="https://strapi.io/"
+                    rel="noopener"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
