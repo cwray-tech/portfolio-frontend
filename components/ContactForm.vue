@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div v-if="isBot" class="rounded bg-orange-500 text-white text-lg p-4">
+      Great! You have proven to be a bot! I've destroyed the form from the page, and acted like you successfully sent the form.
+    </div>
+    <div v-else>
     <div v-if="success" class="rounded bg-indigo-500 text-white text-lg p-4">
       Great! Your message has been sent successfully. I will try to respond
       quickly.
@@ -23,7 +27,14 @@
             class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
             placeholder="Full name*"
           />
+
         </div>
+      </div>
+      <div class="hidden">
+            <label class="sr-only"
+              >Don’t fill this out if you're human: </label>
+              <input v-model="bot" name="bot" placeholder="This field is only for the robots." class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
+            />
       </div>
       <div>
         <label for="email" class="sr-only">Email*</label>
@@ -76,6 +87,7 @@
         </span>
       </div>
     </form>
+    </div>
   </div>
 </template>
 <script>
@@ -85,7 +97,9 @@ export default {
       loading: false,
       success: false,
       errored: false,
+      isBot: false,
       name: "",
+      bot: "",
       email: "",
       phone: "",
       message: "",
@@ -94,23 +108,30 @@ export default {
   methods: {
     sendMessage() {
       this.loading = true;
-      this.$axios
+      if(this.bot != ""){
+        this.isBot = true;
+      }
+      else {
+        this.$axios
         .post("/messages", {
           name: this.name,
           email: this.email,
           phone: this.phone,
           message: this.message,
-        }).then(response => {
-          this.success = true
-          this.errored =false
         })
-        .catch(error => {
-          this.errored = true
+        .then((response) => {
+          this.success = true;
+          this.errored = false;
+        })
+        .catch((error) => {
+          this.errored = true;
         })
         .finally(() => {
-          this.loading = false
+          this.loading = false;
         });
+      }
+
     },
-  }
+  },
 };
 </script>
