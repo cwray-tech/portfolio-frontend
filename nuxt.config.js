@@ -79,7 +79,6 @@ export default {
     config: {
       plugins: [tailwindui]
     },
-
     future: {
       removeDeprecatedGapUtilities: true,
       purgeLayersByDefault: true
