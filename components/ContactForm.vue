@@ -11,6 +11,7 @@
     <form
       v-else
       v-on:submit.prevent="sendMessage"
+      data-netlify="true"
       class="grid grid-cols-1 gap-y-6"
     >
       <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
@@ -30,10 +31,10 @@
 
         </div>
       </div>
-      <div class="hidden">
+      <div>
             <label class="sr-only"
               >Don’t fill this out if you're human: </label>
-              <input v-model="bot" name="bot" placeholder="This field is only for the robots." class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
+              <input v-model="bot" name="bot-field" placeholder="This field is only for the robots." class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
             />
       </div>
       <div>
@@ -99,7 +100,7 @@ export default {
       errored: false,
       isBot: false,
       name: "",
-      bot: "",
+      bot: null,
       email: "",
       phone: "",
       message: "",
@@ -108,7 +109,7 @@ export default {
   methods: {
     sendMessage() {
       this.loading = true;
-      if(this.bot != ""){
+      if(this.bot != null){
         this.isBot = true;
       }
       else {
@@ -119,11 +120,11 @@ export default {
           phone: this.phone,
           message: this.message,
         })
-        .then((response) => {
+        .then(() => {
           this.success = true;
           this.errored = false;
         })
-        .catch((error) => {
+        .catch(() => {
           this.errored = true;
         })
         .finally(() => {
