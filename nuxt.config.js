@@ -18,7 +18,8 @@ export default {
       { hid: 'og: image', property: 'og:image', content: 'https://chriswray.dev/chris-wray-family.jpg' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+      { rel: 'apple-touch-icon', href: '/icon.png'}
     ]
   },
 
