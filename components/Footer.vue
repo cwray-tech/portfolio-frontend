@@ -71,6 +71,14 @@
                 </li>
                 <li class="mt-4">
                   <NuxtLink
+                    to="/categories"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Categories
+                  </NuxtLink>
+                </li>
+                <li class="mt-4">
+                  <NuxtLink
                     to="/contact"
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >

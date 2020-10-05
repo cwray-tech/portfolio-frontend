@@ -58,6 +58,12 @@
             Projects
           </NuxtLink>
           <NuxtLink
+            to="/categories"
+            class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          >
+            Categories
+          </NuxtLink>
+          <NuxtLink
             to="/technologies"
             class="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
           >
@@ -181,6 +187,22 @@
                     </svg>
                     <div class="text-base leading-6 font-medium text-gray-900">
                       Projects
+                    </div>
+                  </NuxtLink>
+                  <NuxtLink
+                    to="/categories"
+                    class="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
+                  >
+                    <svg
+                      class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                    </svg>
+                    <div class="text-base leading-6 font-medium text-gray-900">
+                      Categories
                     </div>
                   </NuxtLink>
                   <NuxtLink
