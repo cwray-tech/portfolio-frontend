@@ -45,20 +45,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    '@nuxtjs/pwa',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.API_ROUTE
-  },
-
-  pwa: {
-    manifest: {
-      name: 'Chris Wray',
-      lang: 'en',
-      start_url: '/'
-    }
   },
 
   // This is for displaying rich text content in the frontend.

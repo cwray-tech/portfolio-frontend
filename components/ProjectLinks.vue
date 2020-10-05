@@ -4,6 +4,7 @@
       v-if="project.github"
       :href="project.github"
       target="_blank"
+      rel="noopener"
       title="View Github Repo"
       class="text-indigo-400 hover:text-indigo-500"
     >
@@ -20,6 +21,7 @@
       v-if="project.link"
       :href="project.link"
       target="_blank"
+      rel="noopener"
       title="View Project"
       class="text-indigo-400 hover:text-indigo-500"
     >

@@ -13,7 +13,10 @@
             Trying to do my part in making the world a better place.
           </p>
           <div class="mt-8 flex">
-            <a href="https://github.com/cwray-tech" class="text-gray-400 hover:text-gray-500">
+            <a href="https://github.com/cwray-tech"
+            target="_blank"
+            rel="noopener"
+            class="text-gray-400 hover:text-gray-500">
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
