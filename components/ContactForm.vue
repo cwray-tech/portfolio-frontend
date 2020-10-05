@@ -31,7 +31,7 @@
 
         </div>
       </div>
-      <div>
+      <div class="hidden">
             <label class="sr-only"
               >Don’t fill this out if you're human: </label>
               <input v-model="bot" name="bot-field" placeholder="This field is only for the robots." class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
