@@ -11,6 +11,7 @@
     <form
       v-else
       v-on:submit.prevent="sendMessage"
+      name="contact-form"
       data-netlify="true"
       class="grid grid-cols-1 gap-y-6"
     >
