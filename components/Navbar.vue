@@ -95,7 +95,7 @@
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-    <transition name="nav-menu">
+    <transition name="fade">
       <div
         v-show="navOpen"
         class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
@@ -267,5 +267,11 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+  .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
