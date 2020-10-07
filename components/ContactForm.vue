@@ -12,7 +12,6 @@
       v-else
       v-on:submit.prevent="sendMessage"
       name="contact-form"
-      data-netlify="true"
       class="grid grid-cols-1 gap-y-6"
     >
       <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
