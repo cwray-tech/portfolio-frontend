@@ -171,10 +171,22 @@ export default {
         title: this.home.name,
         meta: [
           {
-            hid: 'description',
-            name: 'description',
-            content: this.home.meta_description
-          }
+          hid: "description",
+          name: "description",
+          content: this.home.meta_description,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.home.name,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.home.hero_image
+            ? this.home.hero_image.url
+            : "https://chriswray.dev/chris-wray-family.jpg",
+        },
         ]
       }
     },

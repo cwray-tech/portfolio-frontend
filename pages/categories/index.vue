@@ -26,10 +26,20 @@ export default {
         title: this.categoryPage.title,
         meta: [
           {
-            hid: 'description',
-            name: 'description',
-            content: this.categoryPage.meta_description
-          }
+          hid: "description",
+          name: "description",
+          content: this.categoryPage.meta_description,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.categoryPage.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.categoryPage.image ? this.categoryPage.image.url : "https://chriswray.dev/chris-wray-family.jpg",
+        },
         ]
       }
     },

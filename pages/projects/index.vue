@@ -25,9 +25,19 @@ export default {
       title: this.projectPage.title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: this.projectPage.meta_description,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.projectPage.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.projectPage.image ? this.projectPage.image.url : "https://chriswray.dev/chris-wray-family.jpg",
         },
       ],
     };

@@ -113,7 +113,19 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.project.introduction,
+          content: this.project.preview,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.project.name,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.project.main_image
+            ? this.project.main_image.url
+            : "https://chriswray.dev/chris-wray-family.jpg",
         },
       ],
     };

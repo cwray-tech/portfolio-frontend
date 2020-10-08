@@ -28,12 +28,23 @@ export default {
       return {
         title: this.technology.name,
         meta: [
-          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: 'description',
-            name: 'description',
-            content: this.technology.meta_description
-          }
+          hid: "description",
+          name: "description",
+          content: this.technology.description,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.technology.name,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.technology.image
+            ? this.technology.image.url
+            : "https://chriswray.dev/chris-wray-family.jpg",
+        },
         ]
       }
     },

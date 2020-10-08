@@ -89,9 +89,19 @@ export default {
       title: this.contactPage.title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: this.contactPage.meta_description,
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: this.contactPage.title,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: this.contactPage.image ? this.contactPage.image.url : "https://chriswray.dev/chris-wray-family.jpg",
         },
       ],
     };
