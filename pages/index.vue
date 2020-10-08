@@ -162,7 +162,7 @@ export default {
   async fetch() {
     this.home = await this.$axios.$get("/home-page")
 
-    this.posts = await this.$axios.$get("/posts?_limit=4")
+    this.posts = await this.$axios.$get("/posts?_limit=4&_sort=published_at:desc")
 
     this.projects = await this.$axios.$get("/projects?_limit=2")
   },
