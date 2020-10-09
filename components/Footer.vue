@@ -10,7 +10,9 @@
             alt="Chris Wray website logo"
           />
           <p class="mt-8 text-gray-500 text-base leading-6">
-            Trying to do my part in making the world a better place.
+            Trying to do my part in making the world a better place.</p>
+            <p class="mt-3 text-gray-500 text-base leading-6">
+            This site is hosted for free, so I am thanking those services I'm using by adding a link to their websites here in the footer.
           </p>
           <div class="mt-8 flex">
             <a href="https://github.com/cwray-tech"
@@ -25,6 +27,13 @@
                   clip-rule="evenodd"
                 />
               </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/christopher-wray/"
+            target="_blank"
+            rel="noopener"
+            class="text-gray-400 hover:text-gray-500 ml-3">
+              <span class="sr-only">LinkedIn</span>
+              <svg fill="currentColor" class="h-6 w-6" enable-background="new 0 0 100 100"  viewBox="0 0 100 100" ><g id="_x31_0.Linkedin"><path d="m90 90v-29.3c0-14.4-3.1-25.4-19.9-25.4-8.1 0-13.5 4.4-15.7 8.6h-.2v-7.3h-15.9v53.4h16.6v-26.5c0-7 1.3-13.7 9.9-13.7 8.5 0 8.6 7.9 8.6 14.1v26h16.6z"/><path d="m11.3 36.6h16.6v53.4h-16.6z"/><path d="m19.6 10c-5.3 0-9.6 4.3-9.6 9.6s4.3 9.7 9.6 9.7 9.6-4.4 9.6-9.7-4.3-9.6-9.6-9.6z"/></g></svg>
             </a>
           </div>
         </div>
@@ -93,7 +102,7 @@
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
               >
-                Hosting
+                Free Hosting
               </h4>
               <ul class="mt-4">
                 <li>
