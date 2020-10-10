@@ -12,7 +12,7 @@
           <p class="mt-8 text-gray-500 text-base leading-6">
             Trying to do my part in making the world a better place.</p>
             <p class="mt-3 text-gray-500 text-base leading-6">
-            This site is hosted for free, so I am thanking those services I'm using by adding a link to their websites here in the footer.
+            This site is hosted for free, so I am thanking the services I am using by adding a link to their websites here in the footer.
           </p>
           <div class="mt-8 flex">
             <a href="https://github.com/cwray-tech"
@@ -39,11 +39,11 @@
         </div>
         <div class="mt-12 grid lg:grid-cols-2 gap-8 xl:mt-0 lg:col-span-2">
           <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div class="md:col-start-2">
+            <div>
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
               >
-                Website
+                Me
               </h4>
               <ul class="mt-4">
                 <li>
@@ -62,6 +62,34 @@
                     Projects
                   </NuxtLink>
                 </li>
+
+                <li class="mt-4">
+                  <a
+                    href="/Christopher-Wray (resume).pdf"
+                    target="_blank"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Resume
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <NuxtLink
+                    to="/contact"
+                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                  >
+                    Contact
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8 md:mt-0">
+              <h4
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+              >
+                More
+              </h4>
+              <ul class="mt-4">
+
                 <li class="mt-4">
                   <NuxtLink
                     to="/posts"
@@ -84,14 +112,6 @@
                     class="text-base leading-6 text-gray-500 hover:text-gray-900"
                   >
                     Categories
-                  </NuxtLink>
-                </li>
-                <li class="mt-4">
-                  <NuxtLink
-                    to="/contact"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
-                  >
-                    Contact
                   </NuxtLink>
                 </li>
               </ul>
@@ -148,11 +168,11 @@
 
               </ul>
             </div>
-            <div class="mt-12 md:mt-0">
+            <div class="mt-8 md:mt-0">
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
               >
-                Frameworks
+                This Site
               </h4>
               <ul class="mt-4">
                 <li>
