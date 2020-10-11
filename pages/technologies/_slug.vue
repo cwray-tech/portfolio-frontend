@@ -24,9 +24,14 @@ export default {
     this.posts = this.technology.posts
     this.projects = this.technology.projects
   },
+  computed: {
+    title: function(){
+      return this.technology.name ? this.technology.name + ' Developer | Chris Wray | View Projects and Posts' : 'Chris Wray | Full Stack Web Developer and Engineer'
+    }
+  },
   head() {
       return {
-        title: this.technology.name,
+        title: this.title,
         meta: [
           {
           hid: "description",
@@ -36,7 +41,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.technology.name,
+          content: this.title,
         },
         {
           hid: "og:image",

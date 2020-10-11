@@ -22,9 +22,14 @@ export default {
     this.technologies = await this.$axios.$get('/technologies')
     this.technologyPage = await this.$axios.$get('/technology-page')
   },
+  computed: {
+    title: function(){
+      return this.technologyPage.title ? this.technologyPage.title + ' | Chris Wray | Full Stack Engineer' : 'Chris Wray | Full Stack Engineer'
+    }
+  },
   head() {
       return {
-        title: this.technologyPage.title,
+        title: this.title,
         meta: [
           {
           hid: "description",
@@ -34,7 +39,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.technologyPage.title,
+          content: this.title,
         },
         {
           hid: "og:image",

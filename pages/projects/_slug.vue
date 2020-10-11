@@ -106,9 +106,14 @@ export default {
     );
     this.project = projects[0];
   },
+  computed: {
+    title: function() {
+      return this.project.name ? 'Learn About ' + this.project.name + ' | Chris Wray | Software Engineer' : 'Chris Wray | Software Engineer'
+    }
+  },
   head() {
     return {
-      title: this.project.name,
+      title: this.title,
       meta: [
         {
           hid: "description",
@@ -118,7 +123,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.project.name,
+          content: this.title,
         },
         {
           hid: "og:image",

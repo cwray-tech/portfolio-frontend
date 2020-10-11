@@ -20,9 +20,14 @@ export default {
     this.posts = await this.$axios.$get("/posts?_sort=published_at:desc");
     this.postPage = await this.$axios.$get("/posts-page");
   },
+  computed: {
+    title: function(){
+      return this.postPage.title ? this.postPage.title + ' | Software Engineer' : 'Posts from Chris | Software Engineer'
+    }
+  },
   head() {
     return {
-      title: this.postPage.title,
+      title: this.title,
       meta: [
         {
           hid: "description",
@@ -32,7 +37,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.postPage.title,
+          content: this.title,
         },
         {
           hid: "og:image",

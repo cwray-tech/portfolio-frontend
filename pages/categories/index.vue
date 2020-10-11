@@ -14,8 +14,13 @@ export default {
   data () {
     return{
       categoryPage: {},
-      categories: []
+      categories: [],
     }
+  },
+  computed: {
+    title: function () {
+      return this.categoryPage.title ? this.categoryPage.title + ' | Chris Wray | Full Stack Engineer' : 'Chris Wray | Full Stack Engineer'
+      }
   },
   async fetch () {
     this.categories = await this.$axios.$get('/categories');
@@ -23,7 +28,7 @@ export default {
   },
   head() {
       return {
-        title: this.categoryPage.title,
+        title: this.title,
         meta: [
           {
           hid: "description",
@@ -33,7 +38,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.categoryPage.title,
+          content: this.title,
         },
         {
           hid: "og:image",

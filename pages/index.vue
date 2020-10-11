@@ -168,17 +168,11 @@ export default {
   },
    head() {
       return {
-        title: this.home.name,
         meta: [
           {
           hid: "description",
           name: "description",
           content: this.home.meta_description,
-        },
-        {
-          hid: "og:title",
-          property: "og:title",
-          content: this.home.name,
         },
         {
           hid: "og:image",

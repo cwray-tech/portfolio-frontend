@@ -20,9 +20,14 @@ export default {
     this.projectPage = await this.$axios.$get("/projects-page"
     )
   },
+  computed: {
+    title: function(){
+      return this.projectPage.title ? this.projectPage.title + ' | Chris Wray | Software Engineer' : 'Chris Wray | Full Stack Software Engineer'
+    }
+  },
   head() {
     return {
-      title: this.projectPage.title,
+      title: this.title,
       meta: [
         {
           hid: "description",
@@ -32,7 +37,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.projectPage.title,
+          content: this.title,
         },
         {
           hid: "og:image",

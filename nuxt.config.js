@@ -5,14 +5,14 @@ export default {
   target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Chris Wray',
+    title: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title', property: 'og:title', content: 'Chris Wray\'s Developer Portfolio' },
+      { hid: 'og:title', property: 'og:title', content: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband' },
       { hid: 'description', name: 'description', content: 'Get to know Chris.' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://chriswray.dev/chris-wray-family.jpg' },

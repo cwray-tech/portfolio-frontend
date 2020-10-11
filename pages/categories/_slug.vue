@@ -30,9 +30,14 @@ export default {
     this.posts = this.category.posts;
     this.projects = this.category.projects;
   },
+  computed: {
+    title: function() {
+      return this.category.name ? this.category.name + ' | View Projects and Posts' : 'Chris Wray | Full Stack Software Engineer'
+    }
+  },
   head() {
     return {
-      title: this.category.name,
+      title: this.title,
       meta: [
         {
           hid: "description",
@@ -42,7 +47,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: this.category.name,
+          content: this.title,
         },
         {
           hid: "og:image",
