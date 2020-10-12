@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader :title="project.name" :subtitle="project.introduction" />
-    <div class="relative py-16 bg-white overflow-hidden">
+    <div class="relative py-16 bg-white dark:bg-indigo-400 overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
           <svg
