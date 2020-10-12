@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="relative py-16 bg-white overflow-hidden">
+    <div class="relative py-16 bg-white dark:bg-black overflow-hidden">
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
           <NuxtLink
@@ -11,14 +11,14 @@
             {{ post.category.name }}
           </NuxtLink>
           <h1
-            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
           >
             {{ post.title }}
           </h1>
         </div>
         <div
           v-if="post.body"
-          class="prose prose-lg text-gray-500 mx-auto md:text-justify"
+          class="prose dark:prose-dark prose-lg text-gray-500 dark:text-white mx-auto md:text-justify"
           v-html="$md.render(post.body)"
         ></div>
         <div class="prose prose-lg mt-8 mx-auto">

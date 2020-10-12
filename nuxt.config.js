@@ -39,6 +39,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     ['@nuxtjs/google-analytics', {
       id: process.env.ANALYTICS_ID
     }]
@@ -71,12 +72,9 @@ export default {
 
   // TailwindUi Configuration
   tailwindcss: {
-    config: {
-      plugins: [tailwindui]
-    },
-    future: {
-      removeDeprecatedGapUtilities: true,
-      purgeLayersByDefault: true
-    }
+    exposeConfig: true
+  },
+  purgeCSS:{
+    whitelist: ["dark-mode"]
   }
 }

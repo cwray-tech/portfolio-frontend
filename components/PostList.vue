@@ -6,14 +6,14 @@
       <div class="relative mx-auto lg:max-w-7xl w-full">
         <div v-if='showHeading' class="w-full border-b-2 border-gray-100 pb-6">
           <h2 v-if='heading'
-            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10"
+            class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
           >
             {{ heading }}
           </h2>
           <div
             class="mt-3 sm:mt-4 lg:grid md:grid-cols-2 md:gap-5 lg:items-center"
           >
-            <p v-if='subheading' class="text-xl leading-7 text-gray-500">
+            <p v-if='subheading' class="text-xl leading-7 text-gray-500 dark:text-gray-200">
               {{ subheading }}
             </p>
           </div>
@@ -23,10 +23,10 @@
         >
           <div v-for="post in posts" :key="post.id">
             <NuxtLink :to="'/posts/' + post.slug" class="block">
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 dark:text-white">
                 {{ post.title }}
               </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500">
+              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-200">
                 {{ post.preview }}
               </p>
             </NuxtLink>

@@ -1,7 +1,7 @@
 <template>
   <div v-if="projects.length > 0">
     <section
-      class="bg-white overflow-hidden"
+      class="bg-white dark:bg-black dark:text-white overflow-hidden"
       v-for="project in projects"
       :key="project.id"
     >
@@ -17,7 +17,7 @@
             >{{ project.category.name }}</NuxtLink
           >
           <h1
-            class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+            class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
           >
             {{ project.name }}
           </h1>
@@ -70,7 +70,7 @@
                 </div>
                 <figcaption
                   v-if="project.image_caption"
-                  class="flex mt-3 text-sm text-gray-500"
+                  class="flex mt-3 text-sm text-gray-500 dark:text-gray-200"
                 >
                   <!-- Heroicon name: camera -->
                   <svg
@@ -93,12 +93,12 @@
           <div>
             <div class="text-base mx-auto lg:max-w-none">
               <ProjectLinks :project='project' />
-              <p class="text-lg leading-7 text-gray-500 mb-5">
+              <p class="text-lg leading-7 text-gray-500 dark:text-gray-200 mb-5">
                 {{ project.introduction }}
               </p>
             </div>
             <div
-              class="prose text-gray-500 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
+              class="prose text-gray-500 dark:text-gray-200 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
               v-html="$md.render(project.preview)"
             ></div>
             <NuxtLink

@@ -8,10 +8,10 @@
         >
           <div v-for="technology in technologies" :key="technology.id">
             <NuxtLink :to="'/technologies/' + technology.slug" class="block">
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
+              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 dark:text-white">
                 {{ technology.name }}
               </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500">
+              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-200">
                 {{ technology.description }}
               </p>
             </NuxtLink>

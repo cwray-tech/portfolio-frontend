@@ -1,6 +1,5 @@
 <template>
-
-  <div class="bg-white  py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+  <div class="bg-white dark:bg-black py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <div class="lg:max-w-7xl w-full mx-auto">
       <div class="lg:grid lg:grid-cols-3 lg:gap-20">
         <div class="lg:col-span-1">
@@ -9,16 +8,20 @@
             src="/web-programming-gray.svg"
             alt="Chris Wray website logo"
           />
-          <p class="mt-8 text-gray-500 text-base leading-6">
-            Trying to do my part in making the world a better place.</p>
-            <p class="mt-3 text-gray-500 text-base leading-6">
-            This site is hosted for free, so I am thanking the services I am using by adding a link to their websites here in the footer.
+          <p class="mt-8 text-gray-500 dark:text-gray-200 text-base leading-6">
+            Trying to do my part in making the world a better place.
+          </p>
+          <p class="mt-3 text-gray-500 dark:text-gray-200 text-base leading-6">
+            This site is hosted for free, so I am thanking the services I am
+            using by adding a link to their websites here in the footer.
           </p>
           <div class="mt-8 flex">
-            <a href="https://github.com/cwray-tech"
-            target="_blank"
-            rel="noopener"
-            class="text-gray-400 hover:text-gray-500">
+            <a
+              href="https://github.com/cwray-tech"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-400 dark:text-gray-100 hover:text-gray-500 dark:text-gray-200"
+            >
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -28,12 +31,29 @@
                 />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/in/christopher-wray/"
-            target="_blank"
-            rel="noopener"
-            class="text-gray-400 hover:text-gray-500 ml-3">
+            <a
+              href="https://www.linkedin.com/in/christopher-wray/"
+              target="_blank"
+              rel="noopener"
+              class="text-gray-400 dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
+            >
               <span class="sr-only">LinkedIn</span>
-              <svg fill="currentColor" class="h-6 w-6" enable-background="new 0 0 100 100"  viewBox="0 0 100 100" ><g id="_x31_0.Linkedin"><path d="m90 90v-29.3c0-14.4-3.1-25.4-19.9-25.4-8.1 0-13.5 4.4-15.7 8.6h-.2v-7.3h-15.9v53.4h16.6v-26.5c0-7 1.3-13.7 9.9-13.7 8.5 0 8.6 7.9 8.6 14.1v26h16.6z"/><path d="m11.3 36.6h16.6v53.4h-16.6z"/><path d="m19.6 10c-5.3 0-9.6 4.3-9.6 9.6s4.3 9.7 9.6 9.7 9.6-4.4 9.6-9.7-4.3-9.6-9.6-9.6z"/></g></svg>
+              <svg
+                fill="currentColor"
+                class="h-6 w-6"
+                enable-background="new 0 0 100 100"
+                viewBox="0 0 100 100"
+              >
+                <g id="_x31_0.Linkedin">
+                  <path
+                    d="m90 90v-29.3c0-14.4-3.1-25.4-19.9-25.4-8.1 0-13.5 4.4-15.7 8.6h-.2v-7.3h-15.9v53.4h16.6v-26.5c0-7 1.3-13.7 9.9-13.7 8.5 0 8.6 7.9 8.6 14.1v26h16.6z"
+                  />
+                  <path d="m11.3 36.6h16.6v53.4h-16.6z" />
+                  <path
+                    d="m19.6 10c-5.3 0-9.6 4.3-9.6 9.6s4.3 9.7 9.6 9.7 9.6-4.4 9.6-9.7-4.3-9.6-9.6-9.6z"
+                  />
+                </g>
+              </svg>
             </a>
           </div>
         </div>
@@ -41,15 +61,23 @@
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
               <h4
-                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >
                 Me
               </h4>
+              <select
+                v-model="$colorMode.preference"
+                class="border w-24 h-8 dark:bg-gray-900 dark:border-gray-700"
+              >
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
               <ul class="mt-4">
                 <li>
                   <NuxtLink
                     to="/"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Home
                   </NuxtLink>
@@ -57,7 +85,7 @@
                 <li class="mt-4">
                   <NuxtLink
                     to="/projects"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Projects
                   </NuxtLink>
@@ -67,7 +95,7 @@
                   <a
                     href="/Christopher-Wray (resume).pdf"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Resume
                   </a>
@@ -75,7 +103,7 @@
                 <li class="mt-4">
                   <NuxtLink
                     to="/contact"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Contact
                   </NuxtLink>
@@ -84,16 +112,15 @@
             </div>
             <div class="mt-8 md:mt-0">
               <h4
-                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >
                 More
               </h4>
               <ul class="mt-4">
-
                 <li class="mt-4">
                   <NuxtLink
                     to="/posts"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Posts
                   </NuxtLink>
@@ -101,7 +128,7 @@
                 <li class="mt-4">
                   <NuxtLink
                     to="/technologies"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Technologies
                   </NuxtLink>
@@ -109,7 +136,7 @@
                 <li class="mt-4">
                   <NuxtLink
                     to="/categories"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Categories
                   </NuxtLink>
@@ -120,7 +147,7 @@
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
               <h4
-                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >
                 Free Hosting
               </h4>
@@ -130,7 +157,7 @@
                     href="https://heroku.com"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     API-Heroku
                   </a>
@@ -140,7 +167,7 @@
                     href="https://www.netlify.com/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Frontend-Netlify
                   </a>
@@ -150,7 +177,7 @@
                     href="https://www.mongodb.com/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Database-MongoDB Atlas
                   </a>
@@ -160,17 +187,16 @@
                     href="https://cloudinary.com/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Images-Cloudinary
                   </a>
                 </li>
-
               </ul>
             </div>
             <div class="mt-8 md:mt-0">
               <h4
-                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase"
+                class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >
                 This Site
               </h4>
@@ -180,7 +206,7 @@
                     href="https://nuxtjs.org/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     NuxtJs
                   </a>
@@ -190,7 +216,7 @@
                     href="https://vuejs.org/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     VueJs
                   </a>
@@ -200,7 +226,7 @@
                     href="https://tailwindcss.com/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Tailwind CSS
                   </a>
@@ -210,7 +236,7 @@
                     href="https://tailwindui.com/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Tailwind UI
                   </a>
@@ -220,7 +246,7 @@
                     href="https://strapi.io/"
                     rel="noopener"
                     target="_blank"
-                    class="text-base leading-6 text-gray-500 hover:text-gray-900"
+                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Strapi CMS
                   </a>
@@ -231,7 +257,7 @@
         </div>
       </div>
       <div class="mt-12 border-t border-gray-200 pt-8">
-        <p class="text-base leading-6 text-gray-400 xl:text-center">
+        <p class="text-base leading-6 text-gray-400 dark:text-gray-100 xl:text-center">
           &copy; 2020 Chris Wray. All rights reserved.
         </p>
       </div>
