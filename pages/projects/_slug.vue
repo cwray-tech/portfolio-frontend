@@ -80,10 +80,10 @@
         </div>
         <div
           v-if="project.description"
-          class="prose prose-lg text-gray-500 mx-auto"
+          class="prose prose-lg text-gray-500 dark:text-black mx-auto"
           v-html="$md.render(project.description)"
         ></div>
-        <div class="prose prose-lg text-gray-500 mx-auto mt-8">
+        <div class="prose prose-lg text-gray-500 dark:text-black mx-auto mt-8">
           <ProjectLinks :project="project" />
           <ProjectTechnologies :project="project" />
         </div>
