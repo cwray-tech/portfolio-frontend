@@ -12,7 +12,7 @@
                 v-model="$colorMode.preference"
                 class="mt-4 block form-select transition duration-150 ease-in-out sm:text-sm sm:leading-5 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
               >
-                <option value="system">System</option>
+                <option value="system">System Display</option>
                 <option value="light">Light Mode</option>
                 <option value="dark">Dark Mode</option>
               </select>
