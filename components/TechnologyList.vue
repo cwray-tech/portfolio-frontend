@@ -8,17 +8,17 @@
         >
           <div v-for="technology in technologies" :key="technology.id">
             <NuxtLink :to="'/technologies/' + technology.slug" class="block">
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 dark:text-white">
+              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
                 {{ technology.name }}
               </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-200">
+              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-700">
                 {{ technology.description }}
               </p>
             </NuxtLink>
             <div class="mt-3">
               <NuxtLink
                 :to="'/technologies/' + technology.slug"
-                class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                class="text-base leading-6 font-semibold text-indigo-600 dark:text-indigo-700 hover:text-indigo-500 transition ease-in-out duration-150"
               >
                 View projects and posts
               </NuxtLink>

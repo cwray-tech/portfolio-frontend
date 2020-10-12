@@ -2,7 +2,7 @@
   <div>
     <PageHeader :title="contactPage.title" :subtitle="contactPage.subtitle" />
 
-    <div class="relative bg-white dark:bg-black">
+    <div class="relative">
       <div class="absolute inset-0">
         <div class="absolute inset-y-0 left-0 w-1/2"></div>
       </div>
@@ -10,20 +10,20 @@
         <div class="py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8 lg:py-24 xl:pr-12">
           <div class=" mx-auto">
             <h2
-              class="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-3xl sm:leading-9"
+              class="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-9"
             >
               {{ contactPage.subheading }}
             </h2>
-            <p class="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-200">
+            <p class="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-700">
               {{ contactPage.contact_text }}
             </p>
-            <dl class="mt-8 text-base leading-6 text-gray-500 dark:text-gray-200">
+            <dl class="mt-8 text-base leading-6 text-gray-500 dark:text-gray-700">
               <div>
                 <dt class="sr-only">Phone number</dt>
                 <dd class="flex">
                   <!-- Heroicon name: phone -->
                   <svg
-                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-100"
+                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-700"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -43,7 +43,7 @@
                 <dd class="flex">
                   <!-- Heroicon name: mail -->
                   <svg
-                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-100"
+                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-700"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

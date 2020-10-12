@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white dark:bg-black py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+  <div class="bg-white dark:bg-gray-900  py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <div class="lg:max-w-7xl w-full mx-auto">
       <div class="lg:grid lg:grid-cols-3 lg:gap-20">
         <div class="lg:col-span-1">
@@ -8,6 +8,14 @@
             src="/web-programming-gray.svg"
             alt="Chris Wray website logo"
           />
+          <select
+                v-model="$colorMode.preference"
+                class="border w-24 h-8 mt-4 rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+              >
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
           <p class="mt-8 text-gray-500 dark:text-gray-200 text-base leading-6">
             Trying to do my part in making the world a better place.
           </p>
@@ -65,14 +73,7 @@
               >
                 Me
               </h4>
-              <select
-                v-model="$colorMode.preference"
-                class="border w-24 h-8 dark:bg-gray-900 dark:border-gray-700"
-              >
-                <option value="system">System</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-              </select>
+
               <ul class="mt-4">
                 <li>
                   <NuxtLink

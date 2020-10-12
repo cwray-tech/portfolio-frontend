@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-50 bg-white dark:bg-black dark:text-white">
+  <div class="relative z-50 bg-white dark:bg-gray-900 dark:text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="flex justify-between items-center py-6 md:justify-start md:space-x-10"

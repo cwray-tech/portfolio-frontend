@@ -1,24 +1,24 @@
 <template>
   <div>
-    <div class="relative py-16 bg-white dark:bg-black overflow-hidden">
+    <div class="relative py-16 bg-white dark:bg-indigo-400 overflow-hidden">
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div class="text-lg max-w-prose mx-auto mb-6">
           <NuxtLink
             :to="'/categories/' + post.category.slug"
             v-if="post.category"
-            class="text-base text-center block leading-6 text-indigo-600 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
+            class="text-base text-center block leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
             {{ post.category.name }}
           </NuxtLink>
           <h1
-            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
+            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
             {{ post.title }}
           </h1>
         </div>
         <div
           v-if="post.body"
-          class="prose dark:prose-dark prose-lg text-gray-500 dark:text-white mx-auto md:text-justify"
+          class="prose prose-lg text-gray-500 dark:text-gray-700 mx-auto md:text-justify"
           v-html="$md.render(post.body)"
         ></div>
         <div class="prose prose-lg mt-8 mx-auto">
@@ -26,7 +26,7 @@
             :to="'/technologies/' + technology.slug"
             v-for="technology in post.technologies"
             :key="technology.id"
-            class="text-base leading-6 text-indigo-600 font-semibold tracking-wide bg-gray-100 py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
+            class="text-base leading-6 text-indigo-600 dark:text-white font-semibold tracking-wide bg-gray-100 dark:bg-gray-700 py-1 px-3 mr-2 mb-2 rounded-lg uppercase hover:text-indigo-500 hover:bg-white transition ease-in-out duration-150"
           >
             {{ technology.name }}
           </NuxtLink>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="lg:relative  lg:min-h-screen lg:flex lg:items-center"
+      class="bg-gray-50 dark:bg-gray-700 lg:relative lg:min-h-screen lg:flex lg:items-center"
     >
       <div
         class="mx-auto px-4 lg:px-0 max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
@@ -31,7 +31,7 @@
               <NuxtLink
                 :to="home.hero_button_2_route"
                 v-if="home.hero_button_2_text && home.hero_button_2_route"
-                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-indigo-600 dark:text-indigo-700 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 {{ home.hero_button_2_text }}
               </NuxtLink>
@@ -50,7 +50,7 @@
       </div>
     </section>
     <!-- Introduction Area -->
-    <section class="relative py-16 bg-white dark:bg-black dark:text-white overflow-hidden">
+    <section class="relative py-16 bg-white dark:bg-indigo-400 dark:text-white overflow-hidden">
       <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
         <div class="relative h-full text-lg max-w-prose mx-auto">
           <svg
@@ -122,21 +122,21 @@
       <div class="relative px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-lg max-w-prose mx-auto mb-6">
           <p
-            class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+            class="text-base text-center leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase"
           >
             {{ home.introduction_heading }}
           </p>
           <h1
-            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-10"
+            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
             {{ home.introduction_subheading }}
           </h1>
-          <p class="text-xl text-gray-500 dark:text-gray-200 leading-8" v-if="home.introduction">
+          <p class="text-xl text-gray-500 dark:text-black leading-8" v-if="home.introduction">
             {{ home.introduction }}
           </p>
         </div>
         <div
-          class="prose prose-lg dark:prose text-gray-500 dark:text-gray-200 mx-auto md:text-justify"
+          class="prose prose-lg text-gray-500 dark:text-black mx-auto md:text-justify"
           v-if="home.content"
           v-html="$md.render(home.content)"
         ></div>

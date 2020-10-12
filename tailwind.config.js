@@ -17,8 +17,10 @@ module.exports = {
       "dark-even",
       "dark-odd"
     ],
+    rounded: ["dark","responsive"],
     borderColor: ["dark", "dark-focus", "dark-focus-within"],
-    textColor: ["dark", "dark-hover", "dark-active"]
+    textColor: ["dark", "dark-hover", "dark-active"],
+    typography: ["dark", "responsive"]
   },
   plugins: [
     require('@tailwindcss/ui'),

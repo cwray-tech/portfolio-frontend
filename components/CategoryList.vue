@@ -8,17 +8,17 @@
         >
           <div v-for="category in categories" :key="category.id">
             <NuxtLink :to="'/categories/' + category.slug" class="block">
-              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900 dark:text-white">
+              <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
                 {{ category.name }}
               </h3>
-              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-200">
+              <p class="mt-3 text-base leading-6 text-gray-500 dark:text-gray-700">
                 {{ category.description }}
               </p>
             </NuxtLink>
             <div class="mt-3">
               <NuxtLink
                 :to="'/categories/' + category.slug"
-                class="text-base leading-6 font-semibold text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                class="text-base leading-6 font-semibold text-indigo-600 dark:text-indigo-700 hover:text-indigo-500 transition ease-in-out duration-150"
               >
                 View projects and posts
               </NuxtLink>
