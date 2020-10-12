@@ -10,11 +10,11 @@
           />
           <select
                 v-model="$colorMode.preference"
-                class="border w-24 h-8 mt-4 rounded dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+                class="mt-4 block form-select transition duration-150 ease-in-out sm:text-sm sm:leading-5 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
               >
                 <option value="system">System</option>
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
               </select>
           <p class="mt-8 text-gray-500 dark:text-gray-200 text-base leading-6">
             Trying to do my part in making the world a better place.
