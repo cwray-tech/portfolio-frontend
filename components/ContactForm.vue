@@ -141,7 +141,7 @@ export default {
 </script>
 <style scoped>
   .LoadingNotification {
-    animation: 3s appear;
+    animation: 5s appear;
   }
   @keyframes appear {
     0% {
