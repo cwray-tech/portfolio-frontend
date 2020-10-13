@@ -87,11 +87,9 @@
           </button>
         </span>
       </div>
-      <transition name="fade">
-      <div v-if="loading" class="rounded bg-orange-500 text-white text-lg p-4">
+      <div v-if="loading" class="LoadingNotification rounded bg-orange-500 text-white text-lg p-4">
         If this takes forever, I am so sorry in advance. My backend is hosted on Heroku for free, and the server has to rebuild if it has been a while since a form has been submitted.
       </div>
-      </transition>
     </form>
     </div>
   </div>
@@ -142,10 +140,15 @@ export default {
 };
 </script>
 <style scoped>
-  .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+  .LoadingNotification {
+    animation: 3s appear;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+  }
 </style>
