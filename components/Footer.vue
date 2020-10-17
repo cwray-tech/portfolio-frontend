@@ -76,20 +76,10 @@
 
               <ul class="mt-4">
                 <li>
-                  <NuxtLink
-                    to="/"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Home
-                  </NuxtLink>
+                  <FooterLink link="/" text="Home" />
                 </li>
                 <li class="mt-4">
-                  <NuxtLink
-                    to="/projects"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Projects
-                  </NuxtLink>
+                  <FooterLink link="/projects" text="Projects" />
                 </li>
 
                 <li class="mt-4">
@@ -102,12 +92,7 @@
                   </a>
                 </li>
                 <li class="mt-4">
-                  <NuxtLink
-                    to="/contact"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Contact
-                  </NuxtLink>
+                  <FooterLink link="/contact" text="Contact" />
                 </li>
               </ul>
             </div>
@@ -119,28 +104,13 @@
               </h4>
               <ul class="mt-4">
                 <li class="mt-4">
-                  <NuxtLink
-                    to="/posts"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Posts
-                  </NuxtLink>
+                  <FooterLink link="/posts" text="Posts" />
                 </li>
                 <li class="mt-4">
-                  <NuxtLink
-                    to="/technologies"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Technologies
-                  </NuxtLink>
+                  <FooterLink link="/technologies" text="Technologies" />
                 </li>
                 <li class="mt-4">
-                  <NuxtLink
-                    to="/categories"
-                    class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
-                  >
-                    Categories
-                  </NuxtLink>
+                  <FooterLink link="/categories" text="Categories" />
                 </li>
               </ul>
             </div>
