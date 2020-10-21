@@ -79,8 +79,8 @@
         ></div>
       </div>
     </section>
-    <!-- Posts Section -->
-    <PostList :posts="posts" showHeading='true' heading='Latest Posts' subheading='Read some of the latest articles I have written on web development and more.' />
+    <!-- letters Section -->
+    <LetterList :letters="letters" showHeading='true' heading='Cover Letters' subheading='Read my cover letters.' />
   </div>
 </template>
 
@@ -90,12 +90,12 @@ export default {
   data() {
     return {
       coverPage: {},
-      posts: []
+      letters: []
     }
   },
   async fetch () {
     this.coverPage = await this.$axios.$get("/cover-letters-page")
-    this.posts = await this.$axios.$get("/posts?_sort=published_at:desc")
+    this.letters = await this.$axios.$get("/cover-letters?_sort=published_at:desc")
   },
   computed: {
     title () {
