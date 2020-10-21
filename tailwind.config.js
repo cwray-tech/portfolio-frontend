@@ -7,23 +7,27 @@
 module.exports = {
   theme: {
     // compatible with @nuxtjs/color-mode
-    darkSelector: ".dark-mode"
+    darkSelector: '.dark-mode'
   },
   variants: {
-    backgroundColor: [
-      "dark",
-      "dark-hover",
-      "dark-group-hover",
-      "dark-even",
-      "dark-odd"
-    ],
-    rounded: ["dark","responsive"],
-    borderColor: ["dark", "dark-focus", "dark-focus-within"],
-    textColor: ["dark", "dark-hover", "dark-active"],
-    typography: ["dark", "responsive"]
+    backgroundColor: ['dark', 'dark-hover', 'dark-group-hover', 'dark-even', 'dark-odd'],
+    rounded: ['dark', 'responsive'],
+    borderColor: ['dark', 'dark-focus', 'dark-focus-within'],
+    textColor: ['dark', 'dark-hover', 'dark-active'],
+    typography: ['dark', 'responsive']
   },
-  plugins: [
-    require('@tailwindcss/ui'),
-    require("tailwindcss-dark-mode")()
-]
-};
+  plugins: [require('@tailwindcss/ui'), require('tailwindcss-dark-mode')()],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js',
+      // TypeScript
+      'plugins/**/*.ts',
+      'nuxt.config.ts'
+    ]
+  }
+}
