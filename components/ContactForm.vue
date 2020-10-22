@@ -15,6 +15,7 @@
             required
             name="full_name"
             id="full_name"
+            v-model="name"
             class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
             placeholder="Full name*"
           />
@@ -78,3 +79,11 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    name: null
+  }
+}
+</script>
