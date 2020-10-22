@@ -64,7 +64,7 @@
           ></textarea>
         </div>
       </div>
-      <div class="">
+      <div>
         <span class="inline-flex rounded-md shadow-sm">
           <button
             type="submit"
