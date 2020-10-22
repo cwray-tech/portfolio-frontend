@@ -42,7 +42,8 @@
       <div
         class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full flex items-stretch"
       >
-        <img v-if="home.hero_image"
+        <img
+          v-if="home.hero_image"
           class="absolute inset-0 w-full h-full object-cover"
           :src="home.hero_image.url"
           :alt="home.title"
@@ -69,24 +70,13 @@
                 height="20"
                 patternUnits="userSpaceOnUse"
               >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
               </pattern>
             </defs>
-            <rect
-              width="404"
-              height="384"
-              fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
-            />
+            <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
           </svg>
           <svg
-            class="absolute bottom-0 right-full transform -translate-y-1/2 -translate-x-32"
+            class="absolute bottom-0 right-full transform -translate-y-1/4 -translate-x-32"
             width="404"
             height="384"
             fill="none"
@@ -101,21 +91,10 @@
                 height="20"
                 patternUnits="userSpaceOnUse"
               >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
               </pattern>
             </defs>
-            <rect
-              width="404"
-              height="384"
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
+            <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
           </svg>
         </div>
       </div>
@@ -142,48 +121,51 @@
         ></div>
       </div>
     </section>
-    <!-- Project Sections -->
-    <ProjectList :projects='projects' />
+    <ProjectList :projects="projects" />
 
-    <!-- Posts Section -->
-    <PostList :posts='posts' showHeading='true' heading='Latest Posts' subheading='Read some of the latest articles I have written on web development and more.' />
+    <PostList
+      :posts="posts"
+      showHeading="true"
+      heading="Latest Posts"
+      subheading="Read some of the latest articles I have written on web development and more."
+    />
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return{
+  data() {
+    return {
       home: {},
       posts: [],
       projects: []
     }
   },
   async fetch() {
-    this.home = await this.$axios.$get("/home-page")
+    this.home = await this.$axios.$get('/home-page')
 
-    this.posts = await this.$axios.$get("/posts?_limit=4&_sort=published_at:desc")
+    this.posts = await this.$axios.$get('/posts?_limit=4&_sort=published_at:desc')
 
-    this.projects = await this.$axios.$get("/projects?_limit=2")
+    this.projects = await this.$axios.$get('/projects?_limit=2')
   },
-   head() {
-      return {
-        meta: [
-          {
-          hid: "description",
-          name: "description",
-          content: this.home.meta_description,
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.home.meta_description
         },
         {
-          hid: "og:image",
-          property: "og:image",
+          hid: 'og:image',
+          property: 'og:image',
           content: this.home.hero_image
             ? this.home.hero_image.url
-            : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-        ]
-      }
-    },
-    fetchOnServer: true
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
+  },
+  fetchOnServer: true
 }
 </script>
