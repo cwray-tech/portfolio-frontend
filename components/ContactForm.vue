@@ -1,7 +1,6 @@
 <template>
   <div>
     <form
-      action="/contact-form-submitted"
       name="contact-form"
       class="grid grid-cols-1 gap-y-6"
       data-netlify="true"
