@@ -5,9 +5,7 @@
       name="contact-form"
       class="grid grid-cols-1 gap-y-6"
       data-netlify="true"
-      netlify-honeypot="bot-field"
     >
-    <div></div>
       <div>
         <label for="full_name" class="sr-only">Full name*</label>
         <div class="relative rounded-md shadow-sm">
@@ -21,12 +19,6 @@
           />
 
         </div>
-      </div>
-      <div class="hidden">
-            <label class="sr-only"
-              >Don’t fill this out if you're human: </label>
-              <input name="bot-field" placeholder="This field is only for the robots." class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
-            />
       </div>
       <div>
         <label for="email" class="sr-only">Email*</label>
