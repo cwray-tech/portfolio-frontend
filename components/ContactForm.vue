@@ -123,12 +123,9 @@ export default {
           phone: this.phone,
           message: this.message,
         })
-        .then((response) => {
+        .then(() => {
           this.success = true;
           this.errored = false;
-          if(response.status === 200) {
-               this.$router.push({ path : '/contact-form-submitted' });
-            }
         })
         .catch(() => {
           this.errored = true;
