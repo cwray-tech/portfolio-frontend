@@ -1,9 +1,9 @@
 <template>
-  <div class="relative py-16 bg-white overflow-hidden">
+  <div class="relative py-16 bg-white dark:bg-indigo-400 overflow-hidden">
     <div class="relative px-4 sm:px-6 lg:px-8 min-h-screen text-center">
       <div class="text-lg max-w-prose mx-auto mb-6">
         <p
-          class="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+          class="text-base text-center leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase"
         >
           A Form was Submitted
         </p>
@@ -12,11 +12,11 @@
         >
           You did it!
         </h1>
-        <p class="text-xl text-gray-500 leading-8 text-center">
+        <p class="text-xl text-gray-500 dark:text-gray-700 leading-8 text-center">
           I am proud of you! You successfully submitted a contact form on my website.
         </p>
       </div>
-      <div class="prose prose-lg text-gray-500 mx-auto text-center">
+      <div class="prose prose-lg text-gray-500 dark:text-gray-700 mx-auto text-center">
         <p>Thank you. I will do my best to respond quickly.</p>
       </div>
     </div>
