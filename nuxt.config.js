@@ -1,5 +1,3 @@
-import tailwindui from '@tailwindcss/ui'
-
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -12,20 +10,26 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title', property: 'og:title', content: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband'
+      },
       { hid: 'description', name: 'description', content: 'Get to know Chris.' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://chriswray.dev/chris-wray-family.jpg' },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://chriswray.dev/chris-wray-family.jpg'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
-      { rel: 'apple-touch-icon', href: '/icon.png'}
+      { rel: 'apple-touch-icon', href: '/icon.png' }
     ]
   },
-
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+  css: [],
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     //This is for generating a preview. Add ?preview=true to url to see updated content from api.
@@ -40,9 +44,12 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    ['@nuxtjs/google-analytics', {
-      id: process.env.ANALYTICS_ID
-    }]
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: process.env.ANALYTICS_ID
+      }
+    ]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -50,6 +57,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -65,16 +73,23 @@ export default {
     injected: true,
     html: true
   },
+  sitemap: {
+    hostname: 'https://chriswray.dev',
+    gzip: true,
+    exclude: [
+      '/letters',
+    ]
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  },
+  build: {},
 
   // TailwindUi Configuration
   tailwindcss: {
     exposeConfig: true
   },
-  purgeCSS:{
-    whitelist: ["dark-mode"]
+  purgeCSS: {
+    whitelist: ['dark-mode']
   }
+
 }
