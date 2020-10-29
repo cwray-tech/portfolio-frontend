@@ -18,7 +18,7 @@
         </div>
         <div
           v-if="post.body"
-          class="prose prose-lg text-gray-500 dark:text-gray-700 mx-auto md:text-justify"
+          class="prose prose-lg text-gray-500 dark:text-gray-700 mx-auto"
           v-html="$md.render(post.body)"
         ></div>
         <div class="prose prose-lg mt-8 mx-auto">
