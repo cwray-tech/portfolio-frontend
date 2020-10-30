@@ -29,7 +29,11 @@ export default {
     ]
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    { src: '@/assets/css/styles.css', lang: 'css' }
+  ],
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     //This is for generating a preview. Add ?preview=true to url to see updated content from api.
@@ -71,14 +75,13 @@ export default {
     linkify: true,
     breaks: true,
     injected: true,
-    html: true
+    html: true,
+    use: ['markdown-it-highlightjs']
   },
   sitemap: {
     hostname: 'https://chriswray.dev',
     gzip: true,
-    exclude: [
-      '/letters',
-    ]
+    exclude: ['/letters']
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
@@ -91,5 +94,4 @@ export default {
   purgeCSS: {
     whitelist: ['dark-mode']
   }
-
 }

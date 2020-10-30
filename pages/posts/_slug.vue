@@ -41,37 +41,37 @@ export default {
   scrollToTop: true,
   data() {
     return {
-      post: {},
-    };
+      post: {}
+    }
   },
   async fetch() {
-    const posts = await this.$axios.$get(
-      "/posts?slug=" + this.$route.params.slug
-    );
-    this.post = posts[0];
+    const posts = await this.$axios.$get('/posts?slug=' + this.$route.params.slug)
+    this.post = posts[0]
   },
   head() {
     return {
       title: this.post.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: this.post.seo_description,
+          hid: 'description',
+          name: 'description',
+          content: this.post.seo_description
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.post.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.post.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: this.post.image ? this.post.image.url : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-      ],
-    };
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.post.image
+            ? this.post.image.url
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
   },
-  fetchOnServer: true,
-};
+  fetchOnServer: true
+}
 </script>
