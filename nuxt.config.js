@@ -47,6 +47,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@/modules/sitemapRouteGenerator',
     '@nuxtjs/color-mode',
     [
       '@nuxtjs/google-analytics',
