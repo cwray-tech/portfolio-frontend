@@ -3,25 +3,21 @@
     <div class="lg:max-w-7xl w-full mx-auto">
       <div class="lg:grid lg:grid-cols-3 lg:gap-20">
         <div class="lg:col-span-1">
-          <img
-            class="h-10"
-            src="/web-programming-gray.svg"
-            alt="Chris Wray website logo"
-          />
+          <img class="h-10" src="/web-programming-gray.svg" alt="Chris Wray website logo" />
           <select
-                v-model="$colorMode.preference"
-                class="mt-4 block form-select transition duration-150 ease-in-out sm:text-sm sm:leading-5 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-              >
-                <option value="system">System Display</option>
-                <option value="light">Light Mode</option>
-                <option value="dark">Dark Mode</option>
-              </select>
+            v-model="$colorMode.preference"
+            class="mt-4 block form-select transition duration-150 ease-in-out sm:text-sm sm:leading-5 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+          >
+            <option value="system">System Display</option>
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+          </select>
           <p class="mt-8 text-gray-500 dark:text-gray-200 text-base leading-6">
             Trying to do my part in making the world a better place.
           </p>
           <p class="mt-3 text-gray-500 dark:text-gray-200 text-base leading-6">
-            This site is hosted for free, so I am thanking the services I am
-            using by adding a link to their websites here in the footer.
+            This site is hosted for free, so I am thanking the services I am using by adding a link
+            to their websites here in the footer.
           </p>
           <div class="mt-8 flex">
             <a
@@ -84,7 +80,7 @@
 
                 <li class="mt-4">
                   <a
-                    href="/Christopher-Wray (resume).pdf"
+                    href="/Christopher-Wray-Resume.pdf"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
