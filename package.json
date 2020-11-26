@@ -18,7 +18,7 @@
     "core-js": "^3.6.5",
     "markdown-it-highlightjs": "^3.3.0",
     "nuxt": "^2.14.7",
-    "tailwindcss": "^1.8.12"
+    "tailwindcss": "^1.9.6"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.1.1",
