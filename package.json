@@ -11,29 +11,29 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.12.3",
     "@nuxtjs/markdownit": "^1.2.10",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.1.12",
     "@tailwindcss/aspect-ratio": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
-    "core-js": "^3.6.5",
-    "markdown-it-highlightjs": "^3.3.0",
+    "core-js": "^3.8.0",
+    "markdown-it-highlightjs": "^3.3.1",
     "nuxt": "^2.14.7"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^1.1.1",
+    "@nuxtjs/color-mode": "^2.0.0",
     "@nuxtjs/date-fns": "^1.4.0",
-    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config": "^4.0.0",
     "@nuxtjs/eslint-module": "^3.0.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^3.2.0",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.10.0",
-    "eslint-plugin-nuxt": "^1.0.0",
-    "postcss": "^7.0.35",
+    "eslint": "^7.14.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "postcss": "^8.1.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
   }
 }
