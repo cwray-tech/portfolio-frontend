@@ -115,7 +115,7 @@
           </p>
         </div>
         <div
-          class="prose prose-lg text-gray-500 dark:text-black mx-auto md:text-justify"
+          class="prose  prose-lg dark:text-black mx-auto"
           v-if="home.content"
           v-html="$md.render(home.content)"
         ></div>

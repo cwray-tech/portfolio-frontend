@@ -20,21 +20,10 @@
                 height="20"
                 patternUnits="userSpaceOnUse"
               >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
               </pattern>
             </defs>
-            <rect
-              width="404"
-              height="384"
-              fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
-            />
+            <rect width="404" height="384" fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
           </svg>
           <svg
             class="absolute bottom-0 right-full transform -translate-y-0 -translate-x-32"
@@ -52,21 +41,10 @@
                 height="20"
                 patternUnits="userSpaceOnUse"
               >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
               </pattern>
             </defs>
-            <rect
-              width="404"
-              height="384"
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
+            <rect width="404" height="384" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
           </svg>
         </div>
       </div>
@@ -80,10 +58,10 @@
         </div>
         <div
           v-if="project.description"
-          class="prose prose-lg text-gray-500 dark:text-black mx-auto"
+          class="prose prose-lg dark:text-black mx-auto"
           v-html="$md.render(project.description)"
         ></div>
-        <div class="prose prose-lg text-gray-500 dark:text-black mx-auto mt-8">
+        <div class="prose prose-lg dark:text-black mx-auto mt-8">
           <ProjectLinks :project="project" />
           <ProjectTechnologies :project="project" />
         </div>
@@ -97,18 +75,18 @@ export default {
   scrollToTop: true,
   data() {
     return {
-      project: {},
-    };
+      project: {}
+    }
   },
   async fetch() {
-    const projects = await this.$axios.$get(
-      "/projects?slug=" + this.$route.params.slug
-    );
-    this.project = projects[0];
+    const projects = await this.$axios.$get('/projects?slug=' + this.$route.params.slug)
+    this.project = projects[0]
   },
   computed: {
     title: function() {
-      return this.project.name ? 'Learn About ' + this.project.name + ' | Chris Wray | Software Engineer' : 'Chris Wray | Software Engineer'
+      return this.project.name
+        ? 'Learn About ' + this.project.name + ' | Chris Wray | Software Engineer'
+        : 'Chris Wray | Software Engineer'
     }
   },
   head() {
@@ -116,25 +94,25 @@ export default {
       title: this.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: this.project.preview,
+          hid: 'description',
+          name: 'description',
+          content: this.project.preview
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
+          hid: 'og:image',
+          property: 'og:image',
           content: this.project.main_image
             ? this.project.main_image.url
-            : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-      ],
-    };
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
   },
-  fetchOnServer: true,
-};
+  fetchOnServer: true
+}
 </script>

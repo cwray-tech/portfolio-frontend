@@ -11,7 +11,7 @@
         </div>
         <div
           v-if="letter.body"
-          class="prose prose-lg text-gray-500 dark:text-gray-700 mx-auto md:text-justify"
+          class="prose prose-lg dark:text-black mx-auto md:text-justify"
           v-html="$md.render(letter.body)"
         ></div>
       </div>
@@ -24,37 +24,37 @@ export default {
   scrollToTop: true,
   data() {
     return {
-      letter: {},
-    };
+      letter: {}
+    }
   },
   async fetch() {
-    const letters = await this.$axios.$get(
-      "/cover-letters?slug=" + this.$route.params.slug
-    );
-    this.letter = letters[0];
+    const letters = await this.$axios.$get('/cover-letters?slug=' + this.$route.params.slug)
+    this.letter = letters[0]
   },
   head() {
     return {
       title: this.letter.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: this.letter.seo_description,
+          hid: 'description',
+          name: 'description',
+          content: this.letter.seo_description
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.letter.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.letter.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: this.letter.image ? this.letter.image.url : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-      ],
-    };
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.letter.image
+            ? this.letter.image.url
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
   },
-  fetchOnServer: true,
-};
+  fetchOnServer: true
+}
 </script>

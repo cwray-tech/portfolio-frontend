@@ -14,19 +14,20 @@ module.exports = {
       '6xl': '4rem'
     },
     extend: {
-      typography: {
+      typography: theme => ({
         DEFAULT: {
           css: {
-            color: '#333',
             a: {
-              color: '#3182ce',
+              transition: 'ease-in-out .15s',
+              'text-decoration': 'none',
+              color: theme('colors.indigo.700'),
               '&:hover': {
-                color: '#2c5282'
+                color: theme('colors.gray.700')
               }
             }
           }
         }
-      },
+      }),
       padding: {
         '1/2': '50%',
         '1/3': '33.333333%',
