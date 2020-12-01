@@ -6,18 +6,16 @@
       :key="project.id"
     >
       <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <div
-          class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"
-        ></div>
+        <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"></div>
         <div class="mx-auto text-base lg:max-w-none">
           <NuxtLink
             v-if="project.category.name"
             :to="'/categories/' + project.category.slug"
-            class="text-base leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
+            class="text-base leading-6 text-indigo-600 dark:text-black font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
             >{{ project.category.name }}</NuxtLink
           >
           <h1
-            class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900  sm:text-4xl sm:leading-10"
+            class="mt-4 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-black sm:text-4xl sm:leading-10"
           >
             {{ project.name }}
           </h1>
@@ -50,15 +48,9 @@
                   />
                 </pattern>
               </defs>
-              <rect
-                width="404"
-                height="384"
-                fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
-              />
+              <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
             </svg>
-            <div
-              class="relative text-base mx-auto lg:max-w-none content-center"
-            >
+            <div class="relative text-base mx-auto lg:max-w-none content-center">
               <figure class="mb-4">
                 <div class="relative pb-7/12 lg:pb-0">
                   <img
@@ -70,11 +62,11 @@
                 </div>
                 <figcaption
                   v-if="project.image_caption"
-                  class="flex mt-3 text-sm text-gray-500 dark:text-gray-700"
+                  class="flex mt-3 text-sm text-gray-500 dark:text-black"
                 >
                   <!-- Heroicon name: camera -->
                   <svg
-                    class="flex-none w-5 h-5 mr-2 text-gray-400 dark:text-gray-700"
+                    class="flex-none w-5 h-5 mr-2 text-gray-400 dark:text-black"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -87,23 +79,24 @@
                   {{ project.image_caption }}
                 </figcaption>
               </figure>
-              <ProjectTechnologies :project='project' />
+              <ProjectTechnologies :project="project" />
             </div>
           </div>
           <div>
             <div class="text-base mx-auto lg:max-w-none">
-              <ProjectLinks :project='project' />
-              <p class="text-lg leading-7 text-gray-500 dark:text-gray-700 mb-5">
+              <ProjectLinks :project="project" />
+              <p class="text-xl leading-7dark:text-black mb-5">
                 {{ project.introduction }}
               </p>
             </div>
-            <div
-              class="prose text-gray-500 dark:text-gray-700 mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
-              v-html="$md.render(project.preview)"
-            ></div>
             <NuxtLink
               :to="'/projects/' + project.slug"
-              class="text-base leading-6 font-semibold text-indigo-600 dark:text-indigo-700 hover:text-indigo-500 transition ease-in-out duration-150"
+              class="prose prose-lg dark:text-black mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
+              v-html="$md.render(project.preview)"
+            ></NuxtLink>
+            <NuxtLink
+              :to="'/projects/' + project.slug"
+              class="text-base leading-6 font-semibold text-indigo-600 dark:text-black hover:text-indigo-500 transition ease-in-out duration-150"
               >View more details</NuxtLink
             >
           </div>
@@ -115,6 +108,6 @@
 
 <script>
 export default {
-  props: ["projects"],
-};
+  props: ['projects']
+}
 </script>

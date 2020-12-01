@@ -6,7 +6,7 @@
           <NuxtLink
             :to="'/categories/' + post.category.slug"
             v-if="post.category"
-            class="text-base text-center block leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
+            class="text-base text-center block leading-6 text-indigo-600 dark:text-black font-semibold tracking-wide uppercase hover:text-indigo-500 transition ease-in-out duration-150"
           >
             {{ post.category.name }}
           </NuxtLink>

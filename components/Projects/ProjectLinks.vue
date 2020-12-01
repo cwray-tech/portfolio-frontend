@@ -6,7 +6,7 @@
       target="_blank"
       rel="noopener"
       title="View Github Repo"
-      class="text-indigo-400 dark:text-gray-700 hover:text-indigo-500"
+      class="text-indigo-400 dark:text-black hover:text-indigo-500"
     >
       <span class="sr-only">GitHub</span>
       <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -23,7 +23,7 @@
       target="_blank"
       rel="noopener"
       title="View Project"
-      class="text-indigo-400 dark:text-gray-700 hover:text-indigo-500"
+      class="text-indigo-400 dark:text-black hover:text-indigo-500"
     >
       <span class="sr-only">Project Link</span>
       <svg

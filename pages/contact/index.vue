@@ -14,16 +14,16 @@
             >
               {{ contactPage.subheading }}
             </h2>
-            <p class="mt-3 text-lg leading-6 text-gray-500 dark:text-gray-700">
+            <p class="mt-3 text-lg leading-6 text-gray-500 dark:text-black">
               {{ contactPage.contact_text }}
             </p>
-            <dl class="mt-8 text-base leading-6 text-gray-500 dark:text-gray-700">
+            <dl class="mt-8 text-base leading-6 text-gray-500 dark:text-black">
               <div>
                 <dt class="sr-only">Phone number</dt>
                 <dd class="flex">
                   <!-- Heroicon name: phone -->
                   <svg
-                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-700"
+                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-black"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -43,7 +43,7 @@
                 <dd class="flex">
                   <!-- Heroicon name: mail -->
                   <svg
-                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-gray-700"
+                    class="flex-shrink-0 h-6 w-6 text-gray-400 dark:text-black"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -61,9 +61,7 @@
             </dl>
           </div>
         </div>
-        <div
-          class="py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12"
-        >
+        <div class="py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div class="mx-auto lg:max-w-none">
             <ContactForm />
           </div>
@@ -79,33 +77,35 @@ export default {
   data() {
     return {
       contactPage: {}
-    };
+    }
   },
   async fetch() {
-    this.contactPage = await this.$axios.$get("/contact-page");
+    this.contactPage = await this.$axios.$get('/contact-page')
   },
   head() {
     return {
       title: this.contactPage.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: this.contactPage.meta_description,
+          hid: 'description',
+          name: 'description',
+          content: this.contactPage.meta_description
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.contactPage.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.contactPage.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: this.contactPage.image ? this.contactPage.image.url : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-      ],
-    };
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.contactPage.image
+            ? this.contactPage.image.url
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
   },
-  fetchOnServer: true,
-};
+  fetchOnServer: true
+}
 </script>

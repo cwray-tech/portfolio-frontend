@@ -31,7 +31,7 @@
               <NuxtLink
                 :to="home.hero_button_2_route"
                 v-if="home.hero_button_2_text && home.hero_button_2_route"
-                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-indigo-600 dark:text-indigo-700 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:ring-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+                class="w-full flex items-center justify-center px-8 py-3 borderransparent text-base leading-6 font-medium rounded-md text-indigo-600 dark:text-black bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:ring-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 {{ home.hero_button_2_text }}
               </NuxtLink>
@@ -101,21 +101,21 @@
       <div class="relative px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-lg max-w-prose mx-auto mb-6">
           <p
-            class="text-base text-center leading-6 text-indigo-600 dark:text-indigo-700 font-semibold tracking-wide uppercase"
+            class="text-base text-center leading-6 text-indigo-600 dark:text-black font-semibold tracking-wide uppercase"
           >
             {{ home.introduction_heading }}
           </p>
           <h1
-            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 dark:text-black sm:text-4xl sm:leading-10"
           >
             {{ home.introduction_subheading }}
           </h1>
-          <p class="text-xl text-gray-500 dark:text-black leading-8" v-if="home.introduction">
+          <p class="text-xl dark:text-black leading-8" v-if="home.introduction">
             {{ home.introduction }}
           </p>
         </div>
         <div
-          class="prose  prose-lg dark:text-black mx-auto"
+          class="prose prose-lg md:text-justify dark:text-black mx-auto"
           v-if="home.content"
           v-html="$md.render(home.content)"
         ></div>
