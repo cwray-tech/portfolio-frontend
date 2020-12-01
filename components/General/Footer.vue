@@ -4,14 +4,7 @@
       <div class="lg:grid lg:grid-cols-3 lg:gap-20">
         <div class="lg:col-span-1">
           <img class="h-10" src="/web-programming-gray.svg" alt="Chris Wray website logo" />
-          <select
-            v-model="$colorMode.preference"
-            class="mt-4 block form-select transition duration-150 ease-in-out sm:text-sm sm:leading-5 dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          >
-            <option value="system">System Display</option>
-            <option value="light">Light Mode</option>
-            <option value="dark">Dark Mode</option>
-          </select>
+
           <p class="mt-8 text-gray-500 dark:text-gray-200 text-base leading-6">
             Trying to do my part in making the world a better place.
           </p>
@@ -19,12 +12,13 @@
             This site is hosted for free, so I am thanking the services I am using by adding a link
             to their websites here in the footer.
           </p>
+          <DarkModeSwitcher />
           <div class="mt-8 flex">
             <a
               href="https://dev.to/cwraytech"
               target="_blank"
               rel="noopener"
-              class="text-gray-400 dark:text-gray-100 hover:text-gray-500 dark:text-gray-200"
+              class="text-black dark:bg-gray-200 dark:rounded hover:text-gray-500 dark:text-gray-200"
             >
               <span class="sr-only">DEV Profile</span>
               <svg
@@ -53,7 +47,7 @@
               href="https://github.com/cwray-tech"
               target="_blank"
               rel="noopener"
-              class="text-gray-400 dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
+              class="text-black dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
             >
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -69,7 +63,7 @@
               href="https://www.linkedin.com/in/christopher-wray/"
               target="_blank"
               rel="noopener"
-              class="text-gray-400 dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
+              class="text-black dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
             >
               <span class="sr-only">LinkedIn</span>
               <svg

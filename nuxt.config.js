@@ -1,3 +1,4 @@
+import colorModeModule from '@nuxtjs/color-mode'
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -48,7 +49,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@/modules/sitemapRouteGenerator',
-    '@nuxtjs/color-mode',
+    '@nuxtjs/svg',
+    colorModeModule,
     [
       '@nuxtjs/google-analytics',
       {
@@ -83,6 +85,10 @@ export default {
     hostname: 'https://chriswray.dev',
     gzip: true,
     exclude: ['/letters']
+  },
+
+  colorMode: {
+    classSuffix: ''
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
