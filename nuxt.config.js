@@ -50,6 +50,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@/modules/sitemapRouteGenerator',
     '@nuxtjs/svg',
+
     colorModeModule,
     [
       '@nuxtjs/google-analytics',
@@ -64,7 +65,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/date-fns'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

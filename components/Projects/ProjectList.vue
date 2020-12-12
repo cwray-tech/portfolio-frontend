@@ -1,5 +1,5 @@
 <template>
-  <div v-if="projects.length > 0">
+  <div>
     <section
       class="bg-white dark:bg-indigo-400  overflow-hidden"
       v-for="project in projects"
@@ -90,6 +90,7 @@
               </p>
             </div>
             <NuxtLink
+              v-if="project.preview"
               :to="'/projects/' + project.slug"
               class="prose prose-lg dark:text-black mx-auto max-w-none lg:row-start-1 lg:col-start-1 mb-5"
               v-html="$md.render(project.preview)"

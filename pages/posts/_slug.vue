@@ -11,10 +11,11 @@
             {{ post.category.name }}
           </NuxtLink>
           <h1
-            class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+            class="mt-2 mb-4 text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
           >
             {{ post.title }}
           </h1>
+          <Date :date="post.published_at" />
         </div>
         <div
           v-if="post.body"

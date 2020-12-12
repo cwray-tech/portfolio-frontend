@@ -28,7 +28,7 @@
           <div class="mt-3">
             <NuxtLink
               :to="'/posts/' + post.slug"
-              class="text-base leading-6 font-semibold text-indigo-600 dark:text-black dark:text-black hover:text-indigo-500 transition ease-in-out duration-150"
+              class="text-base leading-6 font-semibold text-indigo-600 dark:text-black hover:text-indigo-500 transition ease-in-out duration-150"
             >
               Read full post
             </NuxtLink>
