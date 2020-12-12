@@ -15,14 +15,15 @@
           >
             {{ post.title }}
           </h1>
-          <Date :date="post.published_at" />
         </div>
         <div
           v-if="post.body"
           class="prose prose-lg dark:text-black mx-auto"
           v-html="$md.render(post.body)"
         ></div>
-        <div class="prose prose-lg mt-8 mx-auto">
+        <div class="prose prose-lg mx-auto mt-4"><Date :date="post.published_at" /></div>
+
+        <div class="prose prose-lg mt-6 mx-auto">
           <NuxtLink
             :to="'/technologies/' + technology.slug"
             v-for="technology in post.technologies"

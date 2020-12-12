@@ -18,6 +18,7 @@
       <div class="mt-10 grid gap-16-2  md:grid-cols-2 md:gap-x-5 gap-y-12 w-full">
         <div v-for="post in posts" :key="post.id">
           <NuxtLink :to="'/posts/' + post.slug" class="block">
+            <Date :date="post.published_at" />
             <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">
               {{ post.title }}
             </h3>
