@@ -17,7 +17,7 @@ export default {
     }
   },
   async fetch() {
-    this.technologies = await this.$axios.$get('/technologies?show=1')
+    this.technologies = await this.$axios.$get('/technologies')
     this.technologyPage = await this.$axios.$get('/technology-page')
   },
   computed: {
