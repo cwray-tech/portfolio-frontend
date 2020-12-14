@@ -1,54 +1,56 @@
 <template>
-<div>
-  <PageHeader :title='technologyPage.title' :subtitle='technologyPage.subtitle' />
+  <div>
+    <PageHeader :title="technologyPage.title" :subtitle="technologyPage.subtitle" />
 
     <!-- Technologies Section -->
-  <TechnologyList :technologies="technologies" />
-
+    <TechnologyList :technologies="technologies" />
   </div>
 </template>
 
 <script>
-
 export default {
   scrollToTop: true,
-  data () {
-    return{
+  data() {
+    return {
       technologyPage: {},
       technologies: []
     }
   },
-  async fetch () {
-    this.technologies = await this.$axios.$get('/technologies')
+  async fetch() {
+    this.technologies = await this.$axios.$get('/technologies?show=1')
     this.technologyPage = await this.$axios.$get('/technology-page')
   },
   computed: {
-    title: function(){
-      return this.technologyPage.title ? this.technologyPage.title + ' | Chris Wray | Full Stack Engineer' : 'Chris Wray | Full Stack Engineer'
+    title: function() {
+      return this.technologyPage.title
+        ? this.technologyPage.title + ' | Chris Wray | Fontend Engineer'
+        : 'Chris Wray | Frontend Engineer'
     }
   },
   head() {
-      return {
-        title: this.title,
-        meta: [
-          {
-          hid: "description",
-          name: "description",
-          content: this.technologyPage.meta_description,
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.technologyPage.meta_description
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
-          content: this.technologyPage.image ? this.technologyPage.image.url : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-        ]
-      }
-    },
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.technologyPage.image
+            ? this.technologyPage.image.url
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
+  },
   fetchOnServer: true
 }
 </script>

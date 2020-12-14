@@ -4,11 +4,7 @@
 
     <ProjectList :projects="projects" />
 
-    <PostList
-      :posts="posts"
-      showHeading="true"
-      :heading="'Read posts in ' + category.name"
-    />
+    <PostList :posts="posts" showHeading="true" :heading="'Read posts in ' + category.name" />
   </div>
 </template>
 
@@ -19,20 +15,20 @@ export default {
     return {
       category: {},
       posts: [],
-      projects: [],
-    };
+      projects: []
+    }
   },
   async fetch() {
-    const categories = await this.$axios.$get(
-      "/categories?slug=" + this.$route.params.slug
-    );
-    this.category = categories[0];
-    this.posts = this.category.posts;
-    this.projects = this.category.projects;
+    const categories = await this.$axios.$get('/categories?slug=' + this.$route.params.slug)
+    this.category = categories[0]
+    this.posts = this.category.posts
+    this.projects = this.category.projects
   },
   computed: {
     title: function() {
-      return this.category.name ? this.category.name + ' | View Projects and Posts' : 'Chris Wray | Full Stack Software Engineer'
+      return this.category.name
+        ? this.category.name + ' | View Projects and Posts'
+        : 'Chris Wray | Frontend Software Engineer'
     }
   },
   head() {
@@ -40,25 +36,25 @@ export default {
       title: this.title,
       meta: [
         {
-          hid: "description",
-          name: "description",
-          content: this.category.description,
+          hid: 'description',
+          name: 'description',
+          content: this.category.description
         },
         {
-          hid: "og:title",
-          property: "og:title",
-          content: this.title,
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
         },
         {
-          hid: "og:image",
-          property: "og:image",
+          hid: 'og:image',
+          property: 'og:image',
           content: this.category.image
             ? this.category.image.url
-            : "https://chriswray.dev/chris-wray-family.jpg",
-        },
-      ],
-    };
+            : 'https://chriswray.dev/chris-wray-family.jpg'
+        }
+      ]
+    }
   },
-  fetchOnServer: true,
-};
+  fetchOnServer: true
+}
 </script>
