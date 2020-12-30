@@ -87,31 +87,31 @@
         </div>
         <div class="mt-12 grid lg:grid-cols-2 gap-8 xl:mt-0 lg:col-span-2">
           <div class="grid grid-cols-2 gap-8">
-            <div>
+            <div class="mt-8 md:mt-0">
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >
                 Me
               </h4>
 
-              <ul class="mt-4">
+              <ul>
                 <li>
                   <FooterLink link="/" text="Home" />
                 </li>
-                <li class="mt-4">
+                <li>
                   <FooterLink link="/projects" text="Projects" />
                 </li>
 
-                <li class="mt-4">
-                  <a
-                    href="/Christopher-Wray-Resume.pdf"
+                <li>
+                  <FooterLink
+                    link="/Christopher-Wray-Resume.pdf"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Resume
-                  </a>
+                  </FooterLink>
                 </li>
-                <li class="mt-4">
+                <li>
                   <FooterLink link="/contact" text="Contact" />
                 </li>
               </ul>
@@ -122,21 +122,21 @@
               >
                 More
               </h4>
-              <ul class="mt-4">
-                <li class="mt-4">
+              <ul>
+                <li>
                   <FooterLink link="/posts" text="Posts" />
                 </li>
-                <li class="mt-4">
+                <li>
                   <FooterLink link="/technologies" text="Technologies" />
                 </li>
-                <li class="mt-4">
+                <li>
                   <FooterLink link="/categories" text="Categories" />
                 </li>
               </ul>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-8">
-            <div>
+            <div class="mt-8 md:mt-0">
               <h4
                 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 dark:text-gray-100 uppercase"
               >

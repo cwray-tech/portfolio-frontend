@@ -1,18 +1,18 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: monthly
-    time: '00:00'
-  open-pull-requests-limit: 99
-  reviewers:
-    - christopher wray
-  assignees:
-    - christopher wray
-  labels:
-    - dependencies
-  commit-message:
-    prefix: fix
-    prefix-development: chore
-    include: scope
+  - package-ecosystem: npm
+    directory: '/site'
+    schedule:
+      interval: monthly
+      time: '00:00'
+    open-pull-requests-limit: 99
+    reviewers:
+      - cwray-tech
+    assignees:
+      - cwray-tech
+    labels:
+      - dependencies
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
