@@ -2,6 +2,7 @@ import colorModeModule from '@nuxtjs/color-mode'
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  srcDir: 'site/',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband',
@@ -31,7 +32,7 @@ export default {
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    { src: './node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
     { src: '@/assets/css/styles.css', lang: 'css' }
   ],
 
