@@ -102,14 +102,14 @@
                   <FooterLink link="/projects" text="Projects" />
                 </li>
 
-                <li>
-                  <FooterLink
-                    link="/Christopher-Wray-Resume.pdf"
+                <li class="mt-4">
+                  <a
+                    href="/Christopher-Wray-Resume.pdf"
                     target="_blank"
                     class="text-base leading-6 text-gray-500 dark:text-gray-200 hover:text-gray-900"
                   >
                     Resume
-                  </FooterLink>
+                  </a>
                 </li>
                 <li>
                   <FooterLink link="/contact" text="Contact" />
