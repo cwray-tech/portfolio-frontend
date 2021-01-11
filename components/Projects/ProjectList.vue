@@ -54,6 +54,7 @@
               <figure class="mb-4">
                 <div class="relative pb-7/12 lg:pb-0">
                   <img
+                    :v-if="project.main_image.formats.large"
                     :src="project.main_image.formats.large.url"
                     :alt="project.name"
                     loading="lazy"
