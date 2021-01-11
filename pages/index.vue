@@ -100,7 +100,7 @@ export default {
 
     this.posts = await this.$axios.$get('/posts?_limit=4&_sort=published_at:desc')
 
-    this.projects = await this.$axios.$get('/projects?_limit=2')
+    this.projects = await this.$axios.$get('/projects?_limit=2&_sort=published_at:desc')
   },
   head() {
     return {
