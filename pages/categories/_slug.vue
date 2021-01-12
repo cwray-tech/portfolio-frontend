@@ -2,9 +2,9 @@
   <div>
     <PageHeader :title="category.name" :subtitle="category.description" />
 
-    <ProjectList :projects="projects" />
+    <LazyProjectList :projects="projects" />
 
-    <PostList :posts="posts" showHeading="true" :heading="'Read posts in ' + category.name" />
+    <LazyPostList :posts="posts" showHeading="true" :heading="'Read posts in ' + category.name" />
   </div>
 </template>
 

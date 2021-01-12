@@ -3,7 +3,7 @@
     <PageHeader :title="categoryPage.title" :subtitle="categoryPage.subtitle" />
 
     <!-- Categories Section -->
-    <CategoryList :categories="categories" />
+    <LazyCategoryList :categories="categories" />
   </div>
 </template>
 

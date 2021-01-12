@@ -7,9 +7,9 @@
       :linkText="technology.link_text"
     />
 
-    <ProjectList :projects="projects" />
+    <LazyProjectList :projects="projects" />
 
-    <PostList :posts="posts" showHeading="true" :heading="'Read posts in ' + technology.name" />
+    <LazyPostList :posts="posts" showHeading="true" :heading="'Read posts in ' + technology.name" />
   </div>
 </template>
 

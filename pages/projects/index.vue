@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader :title="projectPage.title" :subtitle="projectPage.subtitle" />
-    <ProjectList :projects="projects" />
+    <LazyProjectList :projects="projects" />
   </div>
 </template>
 

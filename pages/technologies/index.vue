@@ -3,7 +3,7 @@
     <PageHeader :title="technologyPage.title" :subtitle="technologyPage.subtitle" />
 
     <!-- Technologies Section -->
-    <TechnologyList :technologies="technologies" />
+    <LazyTechnologyList :technologies="technologies" />
   </div>
 </template>
 

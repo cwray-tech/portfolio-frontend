@@ -75,9 +75,9 @@
         ></div>
       </div>
     </section>
-    <ProjectList :projects="projects" />
+    <LazyProjectList :projects="projects" />
 
-    <PostList
+    <LazyPostList
       :posts="posts"
       showHeading="true"
       heading="Latest Posts"

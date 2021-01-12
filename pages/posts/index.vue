@@ -3,7 +3,7 @@
     <PageHeader :title="postPage.title" :subtitle="postPage.subtitle" />
 
     <!-- Posts Section -->
-    <PostList :posts="posts" />
+    <LazyPostList :posts="posts" />
   </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     }
   },
   async fetch() {
-    this.posts = await this.$axios.$get('/posts')
+    this.posts = await this.$axios.$get('/posts?_limit=10')
     this.postPage = await this.$axios.$get('/posts-page')
   },
   computed: {

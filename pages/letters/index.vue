@@ -58,14 +58,14 @@
       </div>
     </section>
 
-    <PostList
+    <LazyPostList
       :posts="posts"
       showHeading="true"
       heading="Latest Posts"
       subheading="Read some of the latest articles I have written on web development and more."
     />
 
-    <LetterList
+    <LazyLetterList
       class="hidden"
       :letters="letters"
       showHeading="true"
