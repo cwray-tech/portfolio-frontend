@@ -71,7 +71,12 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.API_ROUTE
+    baseURL: process.env.API_ROUTE,
+    https: true,
+    proxy: true
+  },
+  proxy: {
+    '/functions/contact-form-submitted': process.env.CONTACT_FORM_FUNCTION_API_ROUTE
   },
 
   // This is for displaying rich text content in the frontend.
@@ -94,7 +99,13 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 200000
+      }
+    }
+  },
 
   // TailwindUi Configuration
   tailwindcss: {
