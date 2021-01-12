@@ -125,7 +125,7 @@ export default {
         this.isBot = true
       } else {
         this.$axios
-          .post('/messages', {
+          .post('/functions/contact-form-submitted', {
             name: this.name,
             email: this.email,
             phone: this.phone,
