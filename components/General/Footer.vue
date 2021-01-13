@@ -15,10 +15,40 @@
           <DarkModeSwitcher />
           <div class="mt-8 flex">
             <a
-              href="https://dev.to/cwraytech"
+              href="https://stackshare.io/cwray-tech"
               target="_blank"
               rel="noopener"
               class="text-black dark:bg-gray-200 dark:rounded hover:text-gray-500 dark:text-gray-200"
+            >
+              <span class="sr-only">DEV Profile</span>
+              <svg
+                role="img"
+                class="h-6 w-6 rounded"
+                aria-label="StackShare"
+                viewBox="0 0 124 124"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+              >
+                <title>StackShare</title>
+
+                <g>
+                  <path
+                    d="M101.98,83c-3.9,0 -7.157,2.792 -7.886,6.482c-0.212,1.564 0,3.123 0,3.123c0.73,3.687 3.986,6.477 7.885,6.477c4.434,0 8.042,-3.605 8.042,-8.04c0,-4.434 -3.608,-8.042 -8.042,-8.042m-69.938,-29c-4.434,0 -8.041,3.606 -8.041,8.041c0,4.433 3.607,8.041 8.041,8.041c4.435,0 8.042,-3.608 8.042,-8.041c0,-4.435 -3.607,-8.041 -8.042,-8.041m69.924,-12.918c4.435,0 8.042,-3.608 8.042,-8.041c0,-4.435 -3.607,-8.041 -8.042,-8.041c-3.898,0 -7.155,2.791 -7.885,6.48l0,0.049c0,0 -0.18,1.654 0,3.073c0.73,3.689 3.987,6.48 7.885,6.48"
+                    style="fill:currentColor"
+                  ></path>
+                  <path
+                    d="M101.965,105.961c-6.965,0 -12.841,-4.655 -14.692,-11.022l-13.897,0l-0.076,0.043l-16.575,-28.517l-10.133,0c-1.852,6.367 -7.727,11.023 -14.694,11.023c-8.451,0 -15.303,-6.852 -15.303,-15.303c0,-8.452 6.852,-15.305 15.303,-15.305c6.967,0 12.842,4.656 14.694,11.025l9.905,0l0.128,-0.217l16.675,-28.689l0.141,0.083l13.768,0c1.852,-6.369 7.727,-11.025 14.692,-11.025c8.453,0 15.305,6.853 15.305,15.305c0,8.451 -6.852,15.304 -15.305,15.304c-6.965,0 -12.84,-4.656 -14.692,-11.025l-9.03,0l-14.14,24.326l-0.006,0.023l0.005,0.022l14.162,24.366l9.073,0c1.851,-6.369 7.727,-11.026 14.692,-11.026c8.453,0 15.305,6.853 15.305,15.305c0,8.452 -6.852,15.304 -15.305,15.304Zm23.031,-105.961l-116.992,0c-4.42,0 -8.004,3.561 -8.004,7.953l0,108.094c0,4.393 3.584,7.953 8.004,7.953l116.992,0c4.421,0 8.004,-3.56 8.004,-7.953l0,-108.094c0,-4.392 -3.583,-7.953 -8.004,-7.953Z"
+                    style="fill:currentColor;"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a
+              href="https://dev.to/cwraytech"
+              target="_blank"
+              rel="noopener"
+              class="text-black dark:bg-gray-200 dark:rounded hover:text-gray-500 dark:text-gray-200 ml-3"
             >
               <span class="sr-only">DEV Profile</span>
               <svg
@@ -43,11 +73,12 @@
                 />
               </svg>
             </a>
+
             <a
               href="https://github.com/cwray-tech"
               target="_blank"
               rel="noopener"
-              class="text-black dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
+              class="text-black dark:text-gray-100 hover:text-gray-500 ml-3"
             >
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -63,7 +94,7 @@
               href="https://www.linkedin.com/in/christopher-wray/"
               target="_blank"
               rel="noopener"
-              class="text-black dark:text-gray-100 hover:text-gray-500 dark:text-gray-200 ml-3"
+              class="text-black dark:text-gray-100 hover:text-gray-500 ml-3"
             >
               <span class="sr-only">LinkedIn</span>
               <svg
