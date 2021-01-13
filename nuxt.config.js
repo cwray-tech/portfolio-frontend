@@ -2,6 +2,9 @@ import colorModeModule from '@nuxtjs/color-mode'
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+  env: {
+    contactFormFunctionRoute: process.env.CONTACT_FORM_FUNCTION_API_ROUTE
+  },
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: 'Chris Wray | Full Stack Engineer | Dreamer, Father & Husband',
