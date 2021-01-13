@@ -73,13 +73,6 @@ export default {
   axios: {
     baseURL: process.env.API_ROUTE,
     https: true,
-    proxy: true
-  },
-  proxy: {
-    '/functions/contact-form-submitted':  {
-      target: process.env.CONTACT_FORM_FUNCTION_API_ROUTE,
-      pathRewrite: {'^/functions/contact-form-submitted': ''}
-    }
   },
 
   // This is for displaying rich text content in the frontend.

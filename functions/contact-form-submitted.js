@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 exports.handler = async function(event) {
-  contactFormData = event.body
+  contactFormData = event.body.message
   axios.post('/messages', {contactFormData})
         .then(() => {
             return {
