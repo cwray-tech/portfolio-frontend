@@ -1,4 +1,4 @@
-import axios from 'axios'
+const axios = require('axios').default;
 
 exports.handler = async function(event) {
   contactFormData = event.body.message
