@@ -1,7 +1,7 @@
 const axios = require('axios').default;
 
 exports.handler = async function(event) {
-  contactFormData = event.body.message
+  contactFormData = event.body
   axios.post('/messages', {contactFormData})
         .then(() => {
             return {
