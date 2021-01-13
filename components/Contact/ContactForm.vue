@@ -125,7 +125,7 @@ export default {
         this.isBot = true
       } else {
         this.$axios
-          .post(process.env.contactFormFunctionRoute, {
+          .post('/messages', {
             name: this.name,
             email: this.email,
             phone: this.phone,
