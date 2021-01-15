@@ -21,7 +21,9 @@
           class="prose prose-lg dark:text-black mx-auto"
           v-html="$md.render(post.body)"
         ></div>
-        <div class="prose prose-lg mx-auto mt-4"><Date :date="post.published_at" /></div>
+        <div class="prose prose-lg mx-auto mt-4">
+          <Date v-if="post.published_at" :date="post.published_at" />
+        </div>
 
         <div class="prose prose-lg mt-6 mx-auto">
           <NuxtLink
