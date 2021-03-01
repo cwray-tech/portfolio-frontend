@@ -75,7 +75,6 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.API_ROUTE,
-    https: true,
   },
 
   // This is for displaying rich text content in the frontend.
