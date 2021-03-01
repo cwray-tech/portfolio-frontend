@@ -14,8 +14,8 @@ export default {
   data() {
     return {
       thoughtPage: {
-        title: "Test",
-        description: "Test"
+        title: "My Thoughts",
+        description: "Read them here."
       },
       thoughts: []
     }
