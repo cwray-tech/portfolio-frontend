@@ -45,7 +45,22 @@ export default {
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/Categories',
+      '~/components/Contact',
+      '~/components/General',
+      '~/components/General/navbar',
+      '~/components/Letters',
+      '~/components/Links',
+      '~/components/Posts',
+      '~/components/Projects',
+      '~/components/Technologies',
+      '~/components/Thoughts',
+      '~/components/utils'
+    ]
+  },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
