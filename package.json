@@ -22,7 +22,7 @@
     "axios": "^0.21.2",
     "core-js": "^3.8.1",
     "markdown-it-highlightjs": "^3.5.0",
-    "nuxt": "^2.14.12",
+    "nuxt": "^2.15.8",
     "qs": "^6.10.1"
   },
   "devDependencies": {
