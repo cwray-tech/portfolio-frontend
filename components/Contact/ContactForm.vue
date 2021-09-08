@@ -10,6 +10,7 @@
       </div>
       <form
         v-else
+        netlify
         v-on:submit.prevent="sendMessage"
         name="contact-form"
         class="grid grid-cols-1 gap-y-6"
@@ -17,16 +18,23 @@
         <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
           Bummer, Something went wrong. Did you fill out all of the fields?
         </div>
+        <input type="hidden" name="form-name" value="contact-form" />
         <div>
           <label for="full_name" class="sr-only">Full name*</label>
           <div class="relative rounded-md shadow-sm">
             <input
-              v-model="name"
+              v-model="form.name"
               required
               name="name"
               type="text"
               id="full_name"
-              class="border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 w-full"
+              class="
+                border-gray-300
+                rounded-md
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                w-full
+              "
               placeholder="Full name*"
             />
           </div>
@@ -46,11 +54,17 @@
           <div class="relative rounded-md shadow-sm">
             <input
               required
-              v-model="email"
+              v-model="form.email"
               name="email"
               id="email"
               type="email"
-              class="border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 w-full"
+              class="
+                border-gray-300
+                rounded-md
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                w-full
+              "
               placeholder="Email*"
             />
           </div>
@@ -59,11 +73,17 @@
           <label for="phone" class="sr-only">Phone</label>
           <div class="relative rounded-md shadow-sm">
             <input
-              v-model="phone"
+              v-model="form.phone"
               name="phone"
               type="text"
               id="phone"
-              class="border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 w-full"
+              class="
+                border-gray-300
+                rounded-md
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                w-full
+              "
               placeholder="Phone"
             />
           </div>
@@ -73,11 +93,17 @@
           <div class="relative rounded-md shadow-sm">
             <textarea
               required
-              v-model="message"
+              v-model="form.message"
               name="message"
               id="message"
               rows="4"
-              class="border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 w-full"
+              class="
+                border-gray-300
+                rounded-md
+                focus:ring-indigo-500
+                focus:border-indigo-500
+                w-full
+              "
               placeholder="Message*"
             ></textarea>
           </div>
@@ -86,7 +112,27 @@
           <span class="inline-flex rounded-md shadow-sm">
             <button
               type="submit"
-              class="inline-flex justify-center py-3 px-6 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+              class="
+                inline-flex
+                justify-center
+                py-3
+                px-6
+                border border-transparent
+                text-base
+                leading-6
+                font-medium
+                rounded-md
+                text-white
+                bg-indigo-600
+                hover:bg-indigo-500
+                focus:outline-none
+                focus:border-indigo-700
+                focus:ring-indigo
+                active:bg-indigo-700
+                transition
+                duration-150
+                ease-in-out
+              "
             >
               {{ loading ? 'Sending Message...' : 'Submit' }}
             </button>
@@ -104,6 +150,7 @@
   </div>
 </template>
 <script>
+const qs = require('qs')
 export default {
   data() {
     return {
@@ -111,11 +158,14 @@ export default {
       success: false,
       errored: false,
       isBot: false,
-      name: '',
       bot: null,
-      email: '',
-      phone: '',
-      message: ''
+      form: {
+        'form-name': 'contact-form',
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      }
     }
   },
   methods: {
@@ -124,13 +174,11 @@ export default {
       if (this.bot != null) {
         this.isBot = true
       } else {
-        this.$axios
-          .post('/messages', {
-            name: this.name,
-            email: this.email,
-            phone: this.phone,
-            message: this.message
-          })
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: qs.stringify(this.form)
+        })
           .then(() => {
             this.success = true
             this.errored = false

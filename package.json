@@ -22,7 +22,8 @@
     "axios": "^0.21.1",
     "core-js": "^3.8.1",
     "markdown-it-highlightjs": "^3.4.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "qs": "^6.10.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.2",
