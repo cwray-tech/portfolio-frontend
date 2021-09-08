@@ -36,7 +36,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "postcss": "^8.2.2",
+    "postcss": "^8.2.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1"
   }
 }
