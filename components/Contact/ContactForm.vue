@@ -11,14 +11,18 @@
       <form
         v-else
         netlify
+        netlify-honeypot="bot-field"
         v-on:submit.prevent="sendMessage"
-        name="contact-form"
+        name="Contact Form"
         class="grid grid-cols-1 gap-y-6"
       >
         <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
           Bummer, Something went wrong. Did you fill out all of the fields?
         </div>
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="Contact Form" />
+        <p class="hidden">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
         <div>
           <label for="full_name" class="sr-only">Full name*</label>
           <div class="relative rounded-md shadow-sm">
@@ -39,16 +43,7 @@
             />
           </div>
         </div>
-        <div class="hidden">
-          <label class="sr-only">Don’t fill this out if you're human: </label>
-          <input
-            v-model="bot"
-            name="bot-field"
-            type="text"
-            placeholder="This field is only for the robots."
-            class="border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 w-full"
-          />
-        </div>
+
         <div>
           <label for="email" class="sr-only">Email*</label>
           <div class="relative rounded-md shadow-sm">
@@ -157,8 +152,6 @@ export default {
       loading: false,
       success: false,
       errored: false,
-      isBot: false,
-      bot: null,
       form: {
         'form-name': 'contact-form',
         name: '',
@@ -171,25 +164,22 @@ export default {
   methods: {
     sendMessage() {
       this.loading = true
-      if (this.bot != null) {
-        this.isBot = true
-      } else {
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: qs.stringify(this.form)
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: qs.stringify(this.form)
+      })
+        .then(() => {
+          this.success = true
+          this.errored = false
         })
-          .then(() => {
-            this.success = true
-            this.errored = false
-          })
-          .catch(() => {
-            this.errored = true
-          })
-          .finally(() => {
-            this.loading = false
-          })
-      }
+        .catch(() => {
+          this.errored = true
+        })
+        .finally(() => {
+          this.loading = false
+        })
     }
   }
 }
