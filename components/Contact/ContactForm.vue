@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div v-if="isBot" class="rounded bg-orange-500 text-white text-lg p-4">
-      Great! You have proven to be a bot! I've destroyed the form from the page, and acted like you
-      successfully sent the form.
-    </div>
-    <div v-else>
+    <div>
       <div v-if="success" class="rounded bg-indigo-500 text-white text-lg p-4">
         Great! Your message has been sent successfully. I will try to respond quickly.
       </div>
