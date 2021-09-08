@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
-    "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.2.0",
