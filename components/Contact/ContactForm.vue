@@ -150,6 +150,7 @@ export default {
       success: false,
       errored: false,
       form: {
+        'form-name': 'Contact',
         name: '',
         email: '',
         phone: '',
