@@ -6,16 +6,17 @@
       </div>
       <form
         v-else
-        netlify
-        netlify-honeypot="bot-field"
-        v-on:submit.prevent="sendMessage"
         name="Contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        v-on:submit.prevent="sendMessage"
         class="grid grid-cols-1 gap-y-6"
       >
         <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
           Bummer, Something went wrong. Did you fill out all of the fields?
         </div>
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="Contact" />
         <p class="hidden">
           <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
         </p>
@@ -149,7 +150,6 @@ export default {
       success: false,
       errored: false,
       form: {
-        'form-name': 'contact',
         name: '',
         email: '',
         phone: '',
