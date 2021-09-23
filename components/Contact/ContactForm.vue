@@ -9,7 +9,7 @@
         netlify
         netlify-honeypot="bot-field"
         v-on:submit.prevent="sendMessage"
-        name="Contact Form"
+        name="Contact"
         class="grid grid-cols-1 gap-y-6"
       >
         <div v-if="errored" class="rounded bg-red-200 text-lg p-4">
@@ -149,7 +149,7 @@ export default {
       success: false,
       errored: false,
       form: {
-        'form-name': 'contact-form',
+        'form-name': 'contact',
         name: '',
         email: '',
         phone: '',
