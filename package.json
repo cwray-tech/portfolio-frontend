@@ -16,7 +16,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.2.0",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "axios": "^0.21.2",
