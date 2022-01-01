@@ -20,7 +20,7 @@
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "axios": "^0.21.2",
-    "core-js": "^3.8.1",
+    "core-js": "^3.20.1",
     "markdown-it-highlightjs": "^3.5.0",
     "nuxt": "^2.15.8",
     "qs": "^6.10.1"
