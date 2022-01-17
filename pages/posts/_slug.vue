@@ -73,6 +73,13 @@ export default {
             ? this.post.image.url
             : 'https://chriswray.dev/chris-wray-family.jpg'
         }
+      ],
+      script: [
+        {
+          src:
+            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5072125126275963',
+          crossorigin: 'anonymous'
+        }
       ]
     }
   },
