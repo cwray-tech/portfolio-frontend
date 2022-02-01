@@ -1424,10 +1424,10 @@
     minimatch "^3.0.4"
     sitemap "^4.1.1"
 
-"@nuxtjs/svg@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/svg/-/svg-0.2.0.tgz#dfa6b470969b19eed7d501d4067a944cf395ec55"
-  integrity sha512-H+71LjTdtNqhXVI8P5tJJdWyUMpz1xomCz0iU82Tj5SxIn1MNFs357wLecHxPHz6cIGa6rpSzTguk/v++cUzkg==
+"@nuxtjs/svg@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/svg/-/svg-0.4.0.tgz#db6b188bc74d71021d58ea8c45a03fe4c1f30011"
+  integrity sha512-XF8uvV5YKBPAJr52SFRVkhltAsjCBTwwTc4GTysSm8WPYB2utJLY48qXdVC/J9dNQiMd7NHo1xmEYEqQfzqpqg==
   dependencies:
     file-loader "^6.0.0"
     raw-loader "^4.0.0"
