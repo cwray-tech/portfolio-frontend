@@ -62,7 +62,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio')
+     require('@tailwindcss/aspect-ratio')
   ],
   purge: {
     enabled: process.env.NODE_ENV === 'production',

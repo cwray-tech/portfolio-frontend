@@ -34,7 +34,7 @@ export default {
   },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    { src: '~/node_modules/highlight.js/styles/hopscotch.css', lang: 'css' },
+    { src: '~/node_modules/highlight.js/styles/base16/solarized-dark', lang: 'css' },
     { src: '@/assets/css/styles.css', lang: 'css' }
   ],
 
