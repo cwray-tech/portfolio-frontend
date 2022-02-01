@@ -16,26 +16,27 @@
     "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.4.0",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
     "axios": "^0.21.2",
     "core-js": "^3.8.1",
-    "markdown-it-highlightjs": "^3.5.0",
+    "markdown-it-highlightjs": "^3.6.0",
     "nuxt": "^2.15.8",
-    "qs": "^6.10.1"
+    "qs": "^6.10.3"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/date-fns": "^1.5.0",
-    "@nuxtjs/eslint-config": "^6.0.1",
+    "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "autoprefixer": "^10.3.4",
-    "@babel/eslint-parser": "^7.1.5",
-    "eslint": "^7.32.0",
-    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint": "^8.8.0",
+    "autoprefixer": "^10.4.2",
+    "@babel/eslint-parser": "^7.16.5",
+    "postcss": "^8.4.5"
+    "eslint-plugin-nuxt": "^3.1.0",
     "postcss": "^8.2.10"
   }
 }
