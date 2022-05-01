@@ -33,7 +33,7 @@
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@nuxtjs/tailwindcss": "^5.0.3",
     "autoprefixer": "^10.4.2",
     "eslint": "^8.8.0",
     "eslint-plugin-nuxt": "^3.1.0",
