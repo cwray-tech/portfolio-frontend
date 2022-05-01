@@ -22,7 +22,7 @@
     "@tailwindcss/ui": "0.7.2",
     "axios": "^0.25.0",
     "core-js": "^3.20.3",
-    "markdown-it-highlightjs": "^3.6.0",
+    "markdown-it-highlightjs": "^4.0.1",
     "nuxt": "^2.15.8",
     "qs": "^6.10.3"
   },
