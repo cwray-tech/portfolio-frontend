@@ -2,7 +2,7 @@
 
 This is the frontend code to [my personal portfolio](https://chriswray.dev).
 
-I am open to opportunities! Feel free to check out my website and learn more about me.
+![Chris-Wray-Full-Stack-Engineer-Dreamer-Father-Husband-screenshot](https://user-images.githubusercontent.com/53663762/170277473-c6244a3f-0e4c-4057-af9e-cb1519fa4b92.png)
 
 ## Build Setup
 
