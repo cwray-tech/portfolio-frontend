@@ -27,7 +27,7 @@
     "qs": "^6.10.3"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.5",
+    "@babel/eslint-parser": "^7.18.2",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/date-fns": "^1.5.0",
     "@nuxtjs/eslint-config": "^8.0.0",
