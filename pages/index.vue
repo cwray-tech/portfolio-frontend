@@ -69,7 +69,7 @@
           </p>
         </div>
         <div
-          class="prose prose-lg md:text-justify dark:text-black mx-auto"
+          class="prose prose-lg dark:text-black mx-auto"
           v-if="home.content"
           v-html="$md.render(home.content)"
         ></div>
