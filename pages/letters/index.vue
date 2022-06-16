@@ -51,7 +51,7 @@
       </div>
       <div class="relative px-4 sm:px-6 lg:px-8">
         <div
-          class="prose prose-lg text-gray-500 dark:text-black mx-auto md:text-justify"
+          class="prose prose-lg text-gray-500 dark:text-black mx-auto"
           v-if="coverPage.content"
           v-html="$md.render(coverPage.content)"
         ></div>

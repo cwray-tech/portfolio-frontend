@@ -11,7 +11,7 @@
         </div>
         <div
           v-if="letter.body"
-          class="prose prose-lg dark:text-black mx-auto md:text-justify"
+          class="prose prose-lg dark:text-black mx-auto"
           v-html="$md.render(letter.body)"
         ></div>
       </div>
