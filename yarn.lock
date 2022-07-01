@@ -1370,7 +1370,7 @@
     node-html-parser "^3.2.0"
     ufo "^0.7.4"
 
-"@nuxt/kit@^3.0.0-rc.3":
+"@nuxt/kit@^3.0.0-rc.4":
   version "3.0.0-rc.4"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0-rc.4.tgz#8aa3c26f1bb9f3e7bb78ad2cec33473e32ffccd0"
   integrity sha512-ZBSeHFy3fPUx0equCtyP6eVUAZQWwRqTp2YnHSFqM5+yhN5aTGo8gBlfwttVBr4yhFBpGFRHhQj/iNPqrCeTnQ==
@@ -1699,24 +1699,24 @@
     url-loader "^4.1.0"
     vue-svg-loader "^0.16.0"
 
-"@nuxtjs/tailwindcss@^5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-5.1.2.tgz#4137812ea70ab9067817803124a1606cf851a2e4"
-  integrity sha512-GURUcEyAE6hsOWbLNGOiu832HX53ff2yrbfFJ7qqkFXnq0RNeaoOip+z5MX2mLcmyxlDtFjNmu2rw2rfCTsvHA==
+"@nuxtjs/tailwindcss@^5.1.3":
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-5.1.3.tgz#a5ade6eb8a1d8b270fd0bf3f55ced10854d38505"
+  integrity sha512-JEL192mo8bwz8MK18pqU0vIEIkNQk7qBJ4TkJpLd9cYFbfCGWOhZZVPrtIHALvjn80dzNg6KA9IxHWKxkkleaw==
   dependencies:
-    "@nuxt/kit" "^3.0.0-rc.3"
+    "@nuxt/kit" "^3.0.0-rc.4"
     "@nuxt/postcss8" "^1.1.3"
     "@types/tailwindcss" "^3.0.10"
     autoprefixer "^10.4.7"
-    chalk "^4.1.2"
+    chalk "^5.0.1"
     clear-module "^4.1.2"
     consola "^2.15.3"
     defu "^6.0.0"
     postcss "^8.4.14"
-    postcss-custom-properties "^12.1.7"
-    postcss-nesting "^10.1.7"
-    tailwind-config-viewer "^1.7.0"
-    tailwindcss "^3.0.24"
+    postcss-custom-properties "^12.1.8"
+    postcss-nesting "^10.1.8"
+    tailwind-config-viewer "^1.7.1"
+    tailwindcss "^3.1.4"
     ufo "^0.8.4"
 
 "@nuxtjs/youch@^4.2.3":
@@ -3029,6 +3029,11 @@ chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.1, chalk@^4.1.2:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
+
+chalk@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.0.1.tgz#ca57d71e82bb534a296df63bbacc4a1c22b2a4b6"
+  integrity sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
 
 chardet@^0.7.0:
   version "0.7.0"
@@ -7537,7 +7542,7 @@ postcss-custom-media@^7.0.8:
   dependencies:
     postcss "^7.0.14"
 
-postcss-custom-properties@^12.1.7:
+postcss-custom-properties@^12.1.8:
   version "12.1.8"
   resolved "https://registry.yarnpkg.com/postcss-custom-properties/-/postcss-custom-properties-12.1.8.tgz#aa003e1885c5bd28e2e32496cd597e389ca889e4"
   integrity sha512-8rbj8kVu00RQh2fQF81oBqtduiANu4MIxhyf0HbbStgPtnFlWn0yiaYTpLHrPnJbffVY1s9apWsIoVZcc68FxA==
@@ -7887,10 +7892,10 @@ postcss-nested@5.0.6:
   dependencies:
     postcss-selector-parser "^6.0.6"
 
-postcss-nesting@^10.1.7:
-  version "10.1.8"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.1.8.tgz#1675542cfedc3dc9621993f3abfdafa260c3a460"
-  integrity sha512-txdb3/idHYsBbNDFo1PFY0ExCgH5nfWi8G5lO49e6iuU42TydbODTzJgF5UuL5bhgeSlnAtDgfFTDG0Cl1zaSQ==
+postcss-nesting@^10.1.8:
+  version "10.1.10"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-10.1.10.tgz#9c396df3d8232cbedfa95baaac6b765b8fd2a817"
+  integrity sha512-lqd7LXCq0gWc0wKXtoKDru5wEUNjm3OryLVNRZ8OnW8km6fSNUuFrjEhU3nklxXE2jvd4qrox566acgh+xQt8w==
   dependencies:
     "@csstools/selector-specificity" "^2.0.0"
     postcss-selector-parser "^6.0.10"
@@ -9528,7 +9533,7 @@ svgo@^1.0.0, svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-tailwind-config-viewer@^1.7.0:
+tailwind-config-viewer@^1.7.1:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/tailwind-config-viewer/-/tailwind-config-viewer-1.7.1.tgz#02beca5064d799908865907bbe085f368a4174d0"
   integrity sha512-EtDwFzgQEMJ6dFmp/6K+QJSP7NWANrGDsbwkn/BEq7MVJd/dEIZ5BBZTxo5jx+opa3HNJu/CHtWanKSCrgNwpA==
@@ -9542,10 +9547,10 @@ tailwind-config-viewer@^1.7.0:
     portfinder "^1.0.26"
     replace-in-file "^6.1.0"
 
-tailwindcss@^3.0.24:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.3.tgz#b9ef2c1ae537c339679e8e89635af8e143d1c7eb"
-  integrity sha512-PRJNYdSIthrb8hjmAyymEyEN8Yo61TMXpzyFUpxULeeyRn3Y3gpvuw6FlRTKrJvK7thSGKRnhT36VovVx4WeMA==
+tailwindcss@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.4.tgz#64b09059805505902139fa805d97046080bd90b9"
+  integrity sha512-NrxbFV4tYsga/hpWbRyUfIaBrNMXDxx5BsHgBS4v5tlyjf+sDsgBg5m9OxjrXIqAS/uR9kicxLKP+bEHI7BSeQ==
   dependencies:
     arg "^5.0.2"
     chokidar "^3.5.3"
