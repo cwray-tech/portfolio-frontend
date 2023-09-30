@@ -69,13 +69,7 @@ export default {
     '@/modules/sitemapRouteGenerator',
     '@nuxtjs/svg',
 
-    colorModeModule,
-    [
-      '@nuxtjs/google-analytics',
-      {
-        id: process.env.ANALYTICS_ID
-      }
-    ]
+    colorModeModule
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -84,12 +78,16 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
-    '@nuxtjs/date-fns'
+    '@nuxtjs/date-fns',
+    'nuxt-gtag'
   ],
+  gtag: {
+    id: process.env.ANALYTICS_ID
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.API_ROUTE,
+    baseURL: process.env.API_ROUTE
   },
 
   // This is for displaying rich text content in the frontend.
