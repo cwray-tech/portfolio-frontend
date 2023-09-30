@@ -78,12 +78,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
-    '@nuxtjs/date-fns',
-    'nuxt-gtag'
+    '@nuxtjs/date-fns'
   ],
-  gtag: {
-    id: process.env.ANALYTICS_ID
-  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
