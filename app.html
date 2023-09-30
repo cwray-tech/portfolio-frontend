@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+
+  <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ ENV.googleAnalyticsId }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ ENV.googleAnalyticsId }}');
+    </script>
+  </head>
+
+  <body {{ BODY_ATTRS }}>
+    {{ APP }}
+  </body>
+
+</html>

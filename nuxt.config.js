@@ -120,5 +120,8 @@ export default {
   },
   purgeCSS: {
     whitelist: ['dark-mode']
+  },
+  env: {
+    googleAnalyticsId: process.env.ANALYTICS_ID
   }
 }
